@@ -25,3 +25,4 @@ var enemies_passive: bool = false
 var high_score = 0
 var current_score: int
 var previous_score: int
+var show_credits: bool = false

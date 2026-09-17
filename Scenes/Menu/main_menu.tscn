@@ -1349,7 +1349,7 @@ offset_right = -650.7651
 offset_bottom = 364.3333
 grow_horizontal = 2
 grow_vertical = 2
-text = "Back"
+text = "KEY_BACK"
 
 [node name="title" type="Sprite2D" parent="." unique_id=402884615]
 texture_filter = 1
@@ -1434,7 +1434,7 @@ offset_top = 693.0
 offset_right = 1268.0
 offset_bottom = 716.0
 theme_override_fonts/font = ExtResource("21_egyys")
-text = "Hold ESC to reset save file."
+text = "KEY_ResetSave"
 horizontal_alignment = 2
 
 [node name="Credit" type="Node2D" parent="." unique_id=794234324]
@@ -1472,7 +1472,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("21_egyys")
 theme_override_font_sizes/font_size = 21
-text = "\"Battle Encounter, Cyberpunk-street, cyber_runner\" music by ansimuz"
+text = "\"Battle Encounter, Cyberpunk-street, cyber_runner\" music by LUIS ZUNO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1518,16 +1518,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = 67.0
-offset_right = 132.0
-offset_bottom = 136.0
+offset_left = -151.0
+offset_top = 46.0
+offset_right = 283.0
+offset_bottom = 115.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("21_egyys")
 theme_override_font_sizes/font_size = 32
-text = "STORY DESIGN
-"
+text = "Art & Assets"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1564,7 +1563,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("21_egyys")
 theme_override_font_sizes/font_size = 32
-text = "ASSETS DESIGN"
+text = "Writing & Narrative"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1582,8 +1581,8 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("21_egyys")
 theme_override_font_sizes/font_size = 21
-text = "RINJUSU
-BYUJI"
+text = "BYUJI
+RINJUSU"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1601,7 +1600,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("21_egyys")
 theme_override_font_sizes/font_size = 32
-text = "PROGRAMMING"
+text = "Programming & Design"
 horizontal_alignment = 1
 vertical_alignment = 1
 

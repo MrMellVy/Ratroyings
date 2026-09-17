@@ -5,3 +5,6 @@ KEY_SOUNDS,Sounds,Suara
 KEY_BACK,Back,Kembali
 KEY_Wmode,Window Mode,Mode Jendela
 KEY_Wsize,Window Size,Ukuran Jendela
+KEY_ResetSave,Hold ESC to reset save file.,Tekan dan tahan ESC untuk mengulang save file.
+KEY_ResetAfter,Save file reset,Save file diulang
+KEY_ResetHold,Hold ESC for %d seconds to reset save file.,Tahan ESC %d detik untuk mengulang save file.

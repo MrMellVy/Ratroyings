@@ -998,7 +998,6 @@ limit_bottom = 198
 
 [node name="WorldCamera2" type="Camera2D" parent="." unique_id=1133320123]
 position = Vector2(439, 130.00002)
-rotation = 0.17627825
 ignore_rotation = false
 zoom = Vector2(7.17, 7.17)
 limit_bottom = 198

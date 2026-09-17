@@ -33,7 +33,11 @@ func _ready() -> void:
 	fade_startup = true
 	
 	$TransitionCamera.make_current()
-	_change_camera($Camera2D)
+	if Global.show_credits == true:
+		Global.show_credits = false
+		_change_camera($Camera2D3)
+	else:
+		_change_camera($Camera2D)
 	handle_connecting_signals()
 	
 	update_menu_buttons()
@@ -53,13 +57,13 @@ func _process(delta: float) -> void:
 			var remaining: float = max(0.0, ESC_HOLD_TIME - esc_hold_time)
 			var seconds_left: int  = int(ceil(remaining))
 			
-			reset_label.text = "Hold ESC for %d seconds to reset save file." % seconds_left
+			reset_label.text = tr("KEY_ResetHold") % seconds_left
 	
 		if esc_hold_time >= ESC_HOLD_TIME:
 			Savedata.reset_save()
 			esc_reset_done = true
 			
-			reset_label.text = "Save file reset"
+			reset_label.text = "KEY_ResetAfter"
 			reset_hold_bar.value = 100.0
 			
 			update_menu_buttons()
@@ -70,7 +74,7 @@ func _process(delta: float) -> void:
 		esc_reset_done = false
 		reset_hold_bar.visible = false
 		reset_hold_bar.value = 0.0
-		reset_label.text = "Hold ESC to reset save file."
+		reset_label.text = "KEY_ResetSave"
 
 func update_menu_buttons() -> void:
 	var has_save := Savedata.has_valid_save()

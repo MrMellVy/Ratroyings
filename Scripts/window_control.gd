@@ -34,7 +34,6 @@ func _on_item_selected(index: int) -> void:
 	if win.position.y < 40:
 		win.position.y = 40
 
-	
 func _show_item_selected() -> void:
 	var current_size = get_window().size
 	selected = 1

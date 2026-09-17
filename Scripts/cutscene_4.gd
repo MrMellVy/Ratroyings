@@ -11,6 +11,8 @@ var TransitionRotationTween: Tween
 var current_dialogue_index: int = 0
 var advance_action: StringName = "attack"
 var anim_is_moving: bool = false
+var persistent_shake_power: float = 0.0
+var impact_shake_power: float = 0.0
 
 var dialogue_is_active: bool = true
 var max_lines: int = 5
@@ -41,6 +43,18 @@ func _ready() -> void:
 	$Player/PlayerHealthbar/HealthBarContainer/PlayerHP.visible = false
 	start()
 
+func _process(delta: float) -> void:
+	if not TransitionTween or not TransitionTween.is_running():
+		
+		var total_shake = impact_shake_power + persistent_shake_power
+		
+		if total_shake > 0.0 and selected_camera:
+			var random_offset = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) * total_shake
+			transition_camera.global_transform.origin = selected_camera.global_transform.origin + random_offset
+			
+		elif total_shake == 0.0 and selected_camera:
+			transition_camera.global_transform.origin = selected_camera.global_transform.origin
+
 func _input(event: InputEvent) -> void:
 	if not dialogue_is_active:
 		return
@@ -69,7 +83,7 @@ func _on_dialogue_event(event_name: String) -> void:
 		$AnimationPlayer.play("Start_boss")
 		
 		await get_tree().create_timer(0.3).timeout
-		_change_camera($WorldCamera3, 0.0)
+		_change_camera($WorldCamera3, 0.0, 3.0, 0.9)
 		
 		await get_tree().create_timer(2.0).timeout
 		$AnimationPlayer.play("boss_run")
@@ -163,13 +177,30 @@ func autosave_checkpoint():
 	)
 
 
-func _change_camera(choose_camera: Camera2D, duration: float = 0.5):
+func _change_camera(choose_camera: Camera2D, duration: float = 0.5, shake_power: float = 0.0, shake_duration: float = 0.5):
 	if TransitionTween:
 		TransitionTween.kill()
 	TransitionTween = create_tween()
-	var target_transform: Transform2D = choose_camera.global_transform
-	TransitionTween.tween_property(transition_camera, "global_transform", target_transform, duration).set_trans(Tween.TRANS_SINE)
 	
+	var start_transform: Transform2D = transition_camera.global_transform
+	var target_transform: Transform2D = choose_camera.global_transform
+
+	if shake_power > 0.0:
+		impact_shake_power = shake_power
+		var shake_tween = create_tween()
+		shake_tween.tween_property(self, "impact_shake_power", 0.0, shake_duration)
+
+	var move_step = func(weight: float):
+		var current_trans = target_transform
+		if duration > 0.0:
+				current_trans = start_transform.interpolate_with(target_transform, weight)
+		var total_shake = impact_shake_power + persistent_shake_power
+		var random_offset = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0,1.0)) * total_shake
+		current_trans.origin += random_offset
+		transition_camera.global_transform = current_trans
+	var move_time = max(duration, 0.01)
+	TransitionTween.tween_method(move_step, 0.0, 1.0, move_time).set_trans(Tween.TRANS_SINE)
+
 	if TransitionZoomTween:
 		TransitionZoomTween.kill()
 	TransitionZoomTween = create_tween()
