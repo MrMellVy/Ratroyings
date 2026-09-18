@@ -1,7 +1,7 @@
 extends RichTextLabel
 
-var default_text = "CURRENT SCORE: "
+var default_text = "KEY_CurScore"
 
 func _process(delta: float) -> void:
-	var text = str(default_text, str(Global.current_score))
+	var text = str(tr(default_text), str(Global.current_score))
 	self.text = (text)

@@ -124,7 +124,7 @@ func start() -> void:
 	dialogue_is_active = false
 	
 	Global.is_continuing = true
-	get_tree().change_scene_to_file("res://Scenes/Menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Cutscene/cutscene_6.tscn")
 
 func move_player_to_target(target_node: Node2D) -> void:
 	anim_is_moving = true
@@ -162,7 +162,7 @@ func move_support_to_target(target_node: Node2D) -> void:
 
 func autosave_checkpoint():
 	Savedata.save_checkpoint(
-		"res://Scenes/Cutscene/cutscene_4.tscn",
+		"res://Scenes/Cutscene/cutscene_5.tscn",
 		$Player.health,
 		$Player.damage_bonus,
 		Global.current_score

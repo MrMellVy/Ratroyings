@@ -1,0 +1,11 @@
+[
+        {"name": "Nashear", "text": "...", "face": "CHSpriteFace_Silence_1", "auto": 3.0,  "event": "attack_boss_move_back"},
+        {"name": "Nashear", "text": "Tikus itu melarikan diri!", "face": "CHSpriteFace_What"},
+        {"name": "You", "text": "Bagaimana kita bisa mengejar mahluk itu!?", "face": "SpriteFace_What"},
+        {"name": "Nashear", "text": "Aku punya mobil.", "face": "CHSpriteFace_Haha_2", "event": "showcar"},
+        {"name": "You", "text": "Oh, oke, ayo.", "face": "SpriteFace_Haha_2"},
+        {"name": "Nashear", "text": "...", "face": "CHSpriteFace_Silence_1", "auto": 3.0,  "event": "boss_chase"},
+
+]
+
+

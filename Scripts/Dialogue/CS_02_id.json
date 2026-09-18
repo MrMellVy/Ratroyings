@@ -1,0 +1,13 @@
+[
+        {"name": "Nashear", "text": "ternyata kamu jago bertarung ya?", "face": "CHSpriteFace_Silence_1", "event": "start_move"},
+        {"name": "You", "text": "Terima kasih?", "face": "SpriteFace_Silence_1"},
+        {"name": "You", "text": "Apakah sudah dekat?", "face": "SpriteFace_Silence_1"},
+        {"name": "Nashear", "text": "Sedikit lagi.", "face": "CHSpriteFace_Silence_1"},
+        {"name": "You", "text": "Okelah, Ay-", "face": "SpriteFace_Silence", "auto": 5.0, "event": "boss_camera_show"},
+        {"name": "You", "text": "Apakah kita harus melawanya!?", "face": "SpriteFace_Haha_1"},
+        {"name": "Nashear", "text": "Hm, itu pasti ketuanya", "face": "CHSpriteFace_Silence_1"},
+        {"name": "Nashear", "text": "Bersiaplah. Mahluk itu berjalan kearah kita!", "face": "CHSpriteFace_What", "auto": 3.0, "event": "boss_move"},
+
+]
+
+

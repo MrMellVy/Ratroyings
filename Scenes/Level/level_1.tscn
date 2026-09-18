@@ -499,7 +499,7 @@ offset_right = 20.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("12_fvaf1")
 theme_override_font_sizes/font_size = 15
-text = "GO ->"
+text = "KEY_GO"
 
 [node name="scoreLabels" parent="." unique_id=969138735 instance=ExtResource("10_q2tg5")]
 

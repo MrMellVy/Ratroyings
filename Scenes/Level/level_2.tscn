@@ -1093,7 +1093,7 @@ tile_set = SubResource("TileSet_hnohd")
 
 [node name="itemlabPotions" type="TileMapLayer" parent="." unique_id=1465052956]
 position = Vector2(0, 6)
-tile_map_data = PackedByteArray("AAAHAPr/AQAMAAAAAAAHAPv/AQAMAAEAAAAPAPr/AQAQAAAAAAAPAPv/AQAQAAEAAAAPAP7/AQAQAAQAAAB+AP3/AQATAAcAAAB/AP3/AQAUAAcAAAB7AP3/AQARAAYAAAB6AP3/AQAWAAcAAACaAP3/AQAOAAcAAACbAPz/AQAPAAYAAACbAP3/AQAPAAcAAACcAP3/AQAQAAYAAACdAP3/AQARAAYAAACgAP3/AQAQAAcAAACfAP3/AQATAAcAAACjAP3/AQAWAAcAAACkAP3/AQAVAAYAAADpAP3/AQAWAAcAAADqAP3/AQAYAAcAAABNAAkAAQAdAAUAAABNAAoAAQAdAAYAAABOAAkAAQAeAAUAAABOAAoAAQAeAAYAAABPAAkAAQAZAAcAAABPAAoAAQAfAAYAAABJAAkAAQAdAAIAAABKAAkAAQAeAAIAAABQAAkAAQAaAAcAAABRAAkAAQAbAAcAAABSAAkAAQAcAAcAAABTAAkAAQAdAAcAAABGAAkAAQAaAAIAAABHAAkAAQAbAAIAAABIAAkAAQAcAAIAAABLAAkAAQAfAAIAAABGAAoAAQAbAAMAAABGAAsAAQAbAAQAAABHAAoAAQAcAAMAAABHAAsAAQAcAAQAAABIAAoAAQAdAAMAAABIAAsAAQAdAAQAAABJAAoAAQAeAAMAAABJAAsAAQAeAAQAAABKAAoAAQAfAAMAAABKAAsAAQAfAAQAAABTAAoAAQAZAAYAAABUAAoAAQAaAAYAAAA7AAkAAQAZAAYAAAA8AAkAAQAaAAYAAAA1AAkAAQAaAAEAAAA2AAkAAQAbAAEAAAA3AAkAAQAcAAEAAAA4AAkAAQAdAAEAAAA5AAkAAQAeAAEAAAA6AAkAAQAfAAEAAAA9AAoAAQAaAAUAAAA+AAoAAQAbAAUAAAA/AAoAAQAcAAUAAABUAAgAAQAaAAUAAAA=")
+tile_map_data = PackedByteArray("AAAHAPr/AQAMAAAAAAAHAPv/AQAMAAEAAAAPAPr/AQAQAAAAAAAPAPv/AQAQAAEAAAAPAP7/AQAQAAQAAAB+AP3/AQATAAcAAAB/AP3/AQAUAAcAAAB7AP3/AQARAAYAAAB6AP3/AQAWAAcAAACaAP3/AQAOAAcAAACbAPz/AQAPAAYAAACbAP3/AQAPAAcAAACcAP3/AQAQAAYAAACdAP3/AQARAAYAAACgAP3/AQAQAAcAAACfAP3/AQATAAcAAACjAP3/AQAWAAcAAACkAP3/AQAVAAYAAADpAP3/AQAWAAcAAADqAP3/AQAYAAcAAABNAAkAAQAdAAUAAABOAAkAAQAeAAUAAABPAAkAAQAZAAcAAABJAAkAAQAdAAIAAABKAAkAAQAeAAIAAABQAAkAAQAaAAcAAABRAAkAAQAbAAcAAABSAAkAAQAcAAcAAABTAAkAAQAdAAcAAABGAAkAAQAaAAIAAABHAAkAAQAbAAIAAABIAAkAAQAcAAIAAABLAAkAAQAfAAIAAABGAAoAAQAbAAMAAABHAAoAAQAcAAMAAAA7AAkAAQAZAAYAAAA8AAkAAQAaAAYAAAA1AAkAAQAaAAEAAAA2AAkAAQAbAAEAAAA3AAkAAQAcAAEAAAA4AAkAAQAdAAEAAAA5AAkAAQAeAAEAAAA6AAkAAQAfAAEAAABUAAgAAQAaAAUAAAA=")
 tile_set = SubResource("TileSet_r1dii")
 
 [node name="Border Collision" type="Node2D" parent="." unique_id=704711646]
@@ -1145,16 +1145,16 @@ layer = 2
 visible = false
 
 [node name="EnemySpawnPoint1" type="Marker2D" parent="." unique_id=1300696701]
-position = Vector2(611.085, 138)
+position = Vector2(164.08502, 138)
 
 [node name="EnemySpawnPoint2" type="Marker2D" parent="." unique_id=353946305]
 position = Vector2(-647, 146)
 
 [node name="EnemySpawnPoint3" type="Marker2D" parent="." unique_id=1711132047]
-position = Vector2(513, 139)
+position = Vector2(140, 139)
 
 [node name="EnemySpawnPoint4" type="Marker2D" parent="." unique_id=1005000563]
-position = Vector2(1722, 143)
+position = Vector2(712.105, 143)
 
 [node name="AirEnemySpawnPoint1" type="Marker2D" parent="." unique_id=343216688]
 position = Vector2(-325, -1)
@@ -1227,7 +1227,7 @@ offset_right = 20.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("16_rc20r")
 theme_override_font_sizes/font_size = 15
-text = "GO ->"
+text = "KEY_GO"
 
 [node name="Label2" type="Label" parent="Player" unique_id=650669713]
 visible = false
@@ -1237,7 +1237,7 @@ offset_right = 102.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("16_rc20r")
 theme_override_font_sizes/font_size = 15
-text = "PRESS 'C' To use skill!"
+text = "KEY_CSK"
 
 [node name="Label3" type="Label" parent="Player" unique_id=304122559]
 visible = false
@@ -1247,7 +1247,7 @@ offset_right = 103.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("16_rc20r")
 theme_override_font_sizes/font_size = 9
-text = "PRESS 'Z + SHIFT' To use Dash attack!"
+text = "KEY_DASHA"
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=895766117]
 position = Vector2(164, 159)

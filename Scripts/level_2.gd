@@ -217,10 +217,16 @@ func position_to_next_wave():
 		SceneTransitionAnimation.play("between_wave")
 		$Player.apply_wave_stats(current_wave)
 		
-		# Wave 2+ MORE! and this is where the airenemy spawn.
-		current_wave_batches = [1 + current_wave, 2 + current_wave, 2 + current_wave]
-		current_air_wave_batches = [current_wave, 1 + current_wave, 1 + current_wave]
-		
+		match current_wave:
+			3:
+				current_wave_batches = [3,4,4]
+				current_air_wave_batches = [2,3,3]
+			4:
+				current_wave_batches = [3,3,3]
+				current_air_wave_batches = [2,3,2]
+			_:
+				current_wave_batches = [1,1]
+				current_air_wave_batches = [1,1]
 		current_batch_index = 0
 		#Fix for freeze bug happens when close the window.
 		if is_inside_tree():

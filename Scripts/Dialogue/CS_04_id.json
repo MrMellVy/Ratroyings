@@ -1,0 +1,12 @@
+[
+        {"name": "Nashear", "text": "...", "face": "CHSpriteFace_Silence_1", "auto": 7.0,  "event": "attack_boss_move_back"},
+        {"name": "Nashear", "text": "K-kita berhasil?", "face": "CHSpriteFace_What"},
+        {"name": "You", "text": "Ya! kita berhasil", "face": "SpriteFace_What"},
+        {"name": "Nashear", "text": "Oh, sepertinya kita banyak memberi kerusakan ke tempat ini...", "face": "CHSpriteFace_Haha_2", "event": "move_around"},
+        {"name": "Nashear", "text": "Kita harus pergi sekarang!", "face": "CHSpriteFace_What"},
+        {"name": "You", "text": "Ayo!", "face": "SpriteFace_Silence_1"},
+        {"name": "Nashear", "text": "...", "face": "CHSpriteFace_Silence_1", "auto": 2.0,  "event": "run_away"}
+
+]
+
+

@@ -105,7 +105,7 @@ var wasLatched
 var attack_type: String
 var current_attack: bool
 
-var base_health_max = 200
+var base_health_max = 100
 var damage_bonus = 0
 
 var health = 100

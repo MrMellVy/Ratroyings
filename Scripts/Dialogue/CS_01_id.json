@@ -1,0 +1,13 @@
+[
+        {"name": "You", "text": "Phew, akhirnya mereka pergi.", "face": "SpriteFace_Silence_1"},
+        {"name": "You", "text": "Sekarang aku harus pergi kemana?.", "face": "SpriteFace_Silence"},
+        {"name": "You", "text": "...", "face": "SpriteFace_Silence"},
+        {"name": "Nashear", "text": "Hey, apa yang kamu lakukan disini?", "face": "CHSpriteFace_What"},
+        {"name": "You", "text": "Huh?", "face": "SpriteFace_Hm"},
+        {"name": "Nashear", "text": "Kau tahu, kau seharusnya tidak disini. Banyak tikus dimana-mana saat ini.", "face": "CHSpriteFace_Silence_1"},
+        {"name": "Nashear", "text": "sudahahlah, ikuti aku ke tempat yang aman!", "face": "CHSpriteFace_What"},
+        {"name": "You", "text": "Ah, baiklah.", "face": "SpriteFace_Silence_1"},
+
+]
+
+

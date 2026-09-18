@@ -8,3 +8,16 @@ KEY_Wsize,Window Size,Ukuran Jendela
 KEY_ResetSave,Hold ESC to reset save file.,Tekan dan tahan ESC untuk mengulang save file.
 KEY_ResetAfter,Save file reset,Save file diulang
 KEY_ResetHold,Hold ESC for %d seconds to reset save file.,Tahan ESC %d detik untuk mengulang save file.
+KEY_ScorePrev,Previous Round: ,Ronde sebelumnya: 
+KEY_ScoreHigh,Highscore: ,Skor Tertinggi: 
+KEY_Zone,Zone ,Zona
+KEY_CurZone,Current Zone: ,Zona sekarang: 
+KEY_CurScore,Current Score: ,Skor sekarang: 
+KEY_GO,GO - >,LANJUT - >
+KEY_CSK,"PRESS 'C"" To use skill!",Tekan 'C' untuk menggunakan jurus!
+KEY_DASHA,PRESS 'Z + SHIFT' To use Dash attack!,Tekan  'Z + SHIFT' untuk menerjang
+KEY_G1,Z - ATTACK,Z - MENYERANG
+KEY_G2,SHIFT - DASH,SHIFT - Menerjang
+KEY_G3,"RIGHT, LEFT ARROW KEY - MOVE","KANAN, KIRI ARROW KEY - BERJALAN"
+KEY_G4,ESC - PAUSE MENU,ESC - JEDA MENU
+KEY_G5,PRESS Z,TEKAN Z

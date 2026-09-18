@@ -204,7 +204,7 @@ scale = Vector2(2.19, 2.19)
 pivot_offset = Vector2(73.095795, 18.040726)
 theme_override_fonts/normal_font = ExtResource("1_x1tl0")
 theme_override_font_sizes/normal_font_size = 37
-text = "ZONE 123"
+text = "KEY_Zone"
 script = ExtResource("4_ja1gn")
 
 [node name="ScoreAnim" type="AnimationPlayer" parent="." unique_id=1147819846]
