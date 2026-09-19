@@ -94,17 +94,17 @@ grow_vertical = 2
 scale = Vector2(2.025, 2.025)
 size_flags_stretch_ratio = 0.0
 
-[node name="ButtonMenu" type="TextureButton" parent="PauseMainButtons" unique_id=337147808]
-layout_mode = 2
-texture_normal = ExtResource("2_r7jgj")
-texture_pressed = ExtResource("3_28aqb")
-texture_hover = ExtResource("4_j2cck")
-
 [node name="ButtonResume" type="TextureButton" parent="PauseMainButtons" unique_id=1548859056]
 layout_mode = 2
 texture_normal = ExtResource("5_2on0c")
 texture_pressed = ExtResource("6_n2ruk")
 texture_hover = ExtResource("7_gy8ec")
+
+[node name="ButtonMenu" type="TextureButton" parent="PauseMainButtons" unique_id=337147808]
+layout_mode = 2
+texture_normal = ExtResource("2_r7jgj")
+texture_pressed = ExtResource("3_28aqb")
+texture_hover = ExtResource("4_j2cck")
 
 [node name="Settings" type="TextureButton" parent="PauseMainButtons" unique_id=2082747066]
 layout_mode = 2
@@ -122,6 +122,6 @@ visible = false
 offset_bottom = 0.00012207031
 pivot_offset = Vector2(323, 168)
 
-[connection signal="pressed" from="PauseMainButtons/ButtonMenu" to="." method="_on_button_menu_pressed"]
 [connection signal="pressed" from="PauseMainButtons/ButtonResume" to="." method="_on_button_resume_pressed"]
+[connection signal="pressed" from="PauseMainButtons/ButtonMenu" to="." method="_on_button_menu_pressed"]
 [connection signal="pressed" from="PauseMainButtons/Settings" to="." method="_on_settings_pressed"]

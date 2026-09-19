@@ -19,6 +19,7 @@ func _ready() -> void:
 func start(dialogue_name: String):
 	if d_active:
 		return
+	set_process_unhandled_input(true)
 	current_dialogue_name = dialogue_name
 	var target_file_path := get_localized_dialogue_path(dialogue_name)
 	d_active = true
@@ -54,7 +55,7 @@ func load_dialogue(file_path):
 		print("error can't find any file at path: ", file_path)
 		return []
 	
-func _input(event):
+func _unhandled_input(event):
 	if not d_active:
 		return
 	if event.is_action_pressed("attack") or event.is_action_pressed("ui_accept"):

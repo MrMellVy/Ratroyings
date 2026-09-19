@@ -1339,9 +1339,6 @@ limit_top = -9999995
 limit_right = 10000016
 limit_bottom = 203
 
-[node name="PauseMenu" parent="." unique_id=1424256854 instance=ExtResource("10_1d7de")]
-visible = false
-
 [node name="SupportCH" parent="." unique_id=1941443743 instance=ExtResource("11_hftbe")]
 visible = false
 position = Vector2(307, 166)
@@ -1364,3 +1361,6 @@ libraries/ = SubResource("AnimationLibrary_hc4xf")
 [node name="car" type="Sprite2D" parent="." unique_id=374790658]
 position = Vector2(144, 163)
 texture = SubResource("AtlasTexture_3k1vp")
+
+[node name="PauseMenu" parent="." unique_id=1424256854 instance=ExtResource("10_1d7de")]
+visible = false

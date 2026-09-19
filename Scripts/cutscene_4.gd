@@ -94,12 +94,12 @@ func _on_dialogue_event(event_name: String) -> void:
 		Dialouge.get_node("NinePatchRect").visible = true
 		anim_is_moving = false
 		Dialouge.set_process_input(true)
-		Dialouge.set_process_shortcut_input(true)
+		Dialouge.set_process_unhandled_input(true)
 
 	elif event_name == "showcar":
 		anim_is_moving = true
 		Dialouge.set_process_input(false)
-		Dialouge.set_process_shortcut_input(false)
+		Dialouge.set_process_unhandled_input(false)
 		
 		$Player/AnimatedSprite2D.play("idle")
 		_change_camera($WorldCamera4)
@@ -109,12 +109,12 @@ func _on_dialogue_event(event_name: String) -> void:
 		
 		anim_is_moving = false
 		Dialouge.set_process_input(true)
-		Dialouge.set_process_shortcut_input(true)
+		Dialouge.set_process_unhandled_input(true)
 
 	elif event_name == "boss_chase":
 		anim_is_moving = true
 		Dialouge.set_process_input(false)
-		Dialouge.set_process_shortcut_input(false)
+		Dialouge.set_process_unhandled_input(false)
 		Dialouge.get_node("NinePatchRect").visible = false
 
 		_change_camera($WorldCamera5, 0.0)

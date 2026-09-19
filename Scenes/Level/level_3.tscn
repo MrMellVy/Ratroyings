@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://by1622uoguy0" path="res://Scenes/Menu/Transition.tscn" id="8_cb2we"]
 [ext_resource type="PackedScene" uid="uid://bhoc04ca7xoh5" path="res://Scenes/Other/ScoreWaveLabels.tscn" id="9_cb2we"]
 [ext_resource type="PackedScene" uid="uid://ca0uhuktjhjrw" path="res://Scenes/character/Support_CH.tscn" id="9_iheda"]
+[ext_resource type="PackedScene" uid="uid://bhik0cbrtt1bx" path="res://Scenes/Menu/pause_menu.tscn" id="13_gmdqq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmdqq"]
 texture = ExtResource("1_nci04")
@@ -972,5 +973,8 @@ position = Vector2(1367, -160)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=2062611138]
 position = Vector2(-47, 0)
+
+[node name="PauseMenu" parent="." unique_id=1424256854 instance=ExtResource("13_gmdqq")]
+layer = 2
 
 [connection signal="timeout" from="timer_health_power_up" to="." method="_on_timer_health_power_up_timeout"]

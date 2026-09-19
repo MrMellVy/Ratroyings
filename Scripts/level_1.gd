@@ -60,7 +60,7 @@ func _ready() -> void:
 			
 			$Wave2ZoneTrigger.set_deferred("monitoring", false)
 			$Wave2ZoneTrigger.hide()
-			$Player.global_position = Vector2(-40, 133)
+			$Player.global_position = Vector2(50, 133)
 			$scoreLabels.visible = true
 			$scoreLabels/ScoreAnim.play("ScoreUp")
 			$scoreLabels/WaveAnim.play("WaveUp")

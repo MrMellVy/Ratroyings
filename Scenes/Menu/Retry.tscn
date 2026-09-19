@@ -216,6 +216,9 @@ script = ExtResource("8_ug3to")
 metadata/_edit_use_anchors_ = true
 
 [node name="previousroundLabel" type="RichTextLabel" parent="score_Labels" unique_id=824084577]
+anchors_preset = -1
+anchor_left = -0.0671875
+anchor_right = 0.04921875
 offset_left = 449.0
 offset_top = 272.0
 offset_right = 846.0

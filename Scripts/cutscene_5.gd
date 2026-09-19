@@ -99,7 +99,7 @@ func _on_dialogue_event(event_name: String) -> void:
 		Dialouge.get_node("NinePatchRect").visible = true
 		anim_is_moving = false
 		Dialouge.set_process_input(true)
-		Dialouge.set_process_shortcut_input(true)
+		Dialouge.set_process_unhandled_input(true)
 		
 	if event_name == "run_away":
 		anim_is_moving = true
@@ -112,7 +112,7 @@ func _on_dialogue_event(event_name: String) -> void:
 		
 		anim_is_moving = false
 		Dialouge.set_process_input(true)
-		Dialouge.set_process_shortcut_input(true)
+		Dialouge.set_process_unhandled_input(true)
 		
 		
 func start() -> void:
