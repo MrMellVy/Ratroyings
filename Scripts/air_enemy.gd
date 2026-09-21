@@ -29,6 +29,7 @@ var off_screen_timer: float = 0.0
 @export var is_enemyair_chase: bool
 @onready var collision_polygon_2d: CollisionShape2D = $"../FlyzoneAirEmy/CollisionPolygon2D"
 @onready var anim_play_ae: AnimationPlayer = $AnimPlayAE
+@onready var damage_label_indicator = $DamageLabelIndicator
 
 var player: CharacterBody2D
 
@@ -145,6 +146,7 @@ func take_damage(damage):
 	
 	health -= damage
 	taking_damage = true
+	damage_label_indicator.show_damage_label(-damage)
 	if health <= 0:
 		health = 0
 		defeat = true

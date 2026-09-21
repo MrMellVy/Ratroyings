@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://coiyd03hra4c5" path="res://Assets/Shader/hiteffect.gdshader" id="2_0m13u"]
 [ext_resource type="Texture2D" uid="uid://bi2fh7qkaad10" path="res://Assets/Sprites/EnemyAir/Original/Mosquitoatk.png" id="2_6y317"]
 [ext_resource type="Texture2D" uid="uid://cqa07axqh56vh" path="res://Assets/Sprites/EnemyAir/Original/Mosquitodefeat.png" id="3_0m13u"]
+[ext_resource type="PackedScene" uid="uid://iht8j2jxjtk0" path="res://Scenes/Other/damage_label_indicator.tscn" id="6_6oc7k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6y317"]
 shader = ExtResource("2_0m13u")
@@ -291,6 +292,8 @@ shape = SubResource("CircleShape2D_yjxx7")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=457716260]
 enable_node_path = NodePath("../AnimatedSprite2D")
+
+[node name="DamageLabelIndicator" parent="." unique_id=481979585 instance=ExtResource("6_6oc7k")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="AEHitbox" to="." method="_on_ae_hitbox_area_entered"]

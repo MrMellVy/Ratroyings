@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://duuff8qd42t81" path="res://Scenes/Other/health_bar.tscn" id="3_afpow"]
 [ext_resource type="Texture2D" uid="uid://bwhymbt4xngq3" path="res://Assets/Sprites/Enemy/Original/tikusidle.png" id="4_0830c"]
 [ext_resource type="Texture2D" uid="uid://d21t2b4a6uue7" path="res://Assets/Sprites/Enemy/Original/tikus jalan.png" id="6_auwsv"]
+[ext_resource type="PackedScene" uid="uid://iht8j2jxjtk0" path="res://Scenes/Other/damage_label_indicator.tscn" id="8_7odo0"]
 [ext_resource type="AudioStream" uid="uid://db1dxeghnkorv" path="res://Assets/Audio/SFX/Hitsound.wav" id="8_skj07"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hghv2"]
@@ -602,6 +603,8 @@ libraries/ = SubResource("AnimationLibrary_8uf12")
 [node name="SkillHitSFX" type="AudioStreamPlayer" parent="." unique_id=261435984]
 stream = SubResource("AudioStreamRandomizer_7odo0")
 bus = &"SFX"
+
+[node name="DamageLabelIndicator" parent="." unique_id=481979585 instance=ExtResource("8_7odo0")]
 
 [connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]
 [connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]

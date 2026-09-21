@@ -30,6 +30,7 @@ var is_enemy_chase: bool = true
 var health_min = 0
 var hit_by_skill: bool = false
 
+@onready var damage_label_indicator = $DamageLabelIndicator
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var separate_area: Area2D = $SeparateArea
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -174,6 +175,7 @@ func take_damage(damage):
 	
 	health -= damage
 	taking_damage = true
+	damage_label_indicator.show_damage_label(-damage)
 	if health <= health_min:
 		health = health_min
 		defeat = true

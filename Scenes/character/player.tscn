@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://cqxp3pcmtu2nb" path="res://Assets/Audio/SFX/Sword Whoosh 04.wav" id="25_vfarp"]
 [ext_resource type="PackedScene" uid="uid://b3qoe5fyucafc" path="res://Scenes/character/enemy_dummy_damage.tscn" id="27_d42ii"]
 [ext_resource type="PackedScene" uid="uid://clxe4hkd427ln" path="res://Scenes/Menu/test_sk_button_2.tscn" id="28_smjl8"]
+[ext_resource type="PackedScene" uid="uid://iht8j2jxjtk0" path="res://Scenes/Other/damage_label_indicator.tscn" id="29_13xor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pu2lt"]
 size = Vector2(8, 30)
@@ -1168,5 +1169,7 @@ position = Vector2(278, -4)
 [node name="Actionbar" type="CanvasLayer" parent="." unique_id=507612264]
 
 [node name="TestSkButton" parent="Actionbar" unique_id=97205223 instance=ExtResource("28_smjl8")]
+
+[node name="DamageLabelIndicator" parent="." unique_id=136225903 instance=ExtResource("29_13xor")]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

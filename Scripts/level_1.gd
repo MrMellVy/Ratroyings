@@ -71,7 +71,7 @@ func _ready() -> void:
 			await $scoreLabels/MiddleWaveAnim.animation_finished
 			await get_tree().create_timer(1.5).timeout
 		position_to_next_wave()
-		current_wave_batches = [3 + current_wave, 5 + current_wave]
+		current_wave_batches = [1 + current_wave, 1 + current_wave]
 		current_batch_index = 0
 		current_air_batch_index = 0
 		spawn_next_batch()
@@ -114,8 +114,8 @@ func position_to_next_wave():
 
 		
 		if current_wave == 1:
-			# Wave 1 will spawn 2 enemies, then 4, then 3
-			current_wave_batches = [2, 4, 3]
+			# Wave 1 will spawn 2 enemies, then 2, then 2
+			current_wave_batches = [2, 2, 2]
 			current_air_wave_batches = [0]
 		elif current_wave == 3:
 			Global.saved_wave = current_wave
@@ -126,8 +126,8 @@ func position_to_next_wave():
 			get_tree().change_scene_to_file("res://Scenes/Cutscene/cutscene_2.tscn")
 		else:
 			# Wave 2+ Wave3ZoneTriggerMORE! and this is where the airenemy spawn.
-			current_wave_batches = [current_wave, 1 + current_wave]
-			current_air_wave_batches = [1 + current_wave, 2 + current_wave]
+			current_wave_batches = [current_wave, current_wave]
+			current_air_wave_batches = [current_wave, current_wave]
 		current_batch_index = 0
 		current_air_batch_index = 0
 		#Fix for freeze bug happens when close the window.

@@ -376,7 +376,7 @@ size = Vector2(51, 259)
 
 [node name="Level_1" type="Node2D" unique_id=630728870]
 script = ExtResource("1_pvlc2")
-starting_wave = 2
+starting_wave = 1
 enemy_scene = ExtResource("10_d68a7")
 airenemy_scene = ExtResource("12_mt3j2")
 

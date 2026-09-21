@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://c6btqlalthr7i" path="res://Scripts/defeat.gd" id="12_df6xc"]
 [ext_resource type="Script" uid="uid://dgdv5dvmf7uvx" path="res://Scripts/hurt.gd" id="16_7d68f"]
 [ext_resource type="Script" uid="uid://l5rfq50mcanu" path="res://Scripts/dash.gd" id="18_6efbs"]
+[ext_resource type="PackedScene" uid="uid://iht8j2jxjtk0" path="res://Scenes/Other/damage_label_indicator.tscn" id="20_jr1ie"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rrsei"]
 shader = ExtResource("2_rrsei")
@@ -942,6 +943,8 @@ shape = SubResource("CircleShape2D_rrsei")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=408872381]
 position = Vector2(-81, 21)
+
+[node name="DamageLabelIndicator" parent="." unique_id=481979585 instance=ExtResource("20_jr1ie")]
 
 [connection signal="body_entered" from="CollisionShape2D/PlayerDetect" to="FiniteStateMachine/Idle" method="_on_player_detect_body_entered"]
 [connection signal="area_entered" from="BossHitbox" to="." method="_on_boss_hitbox_area_entered"]

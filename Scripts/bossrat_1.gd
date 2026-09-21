@@ -9,6 +9,7 @@ const GRAVITY = 980.0
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var progress_bar = $UI/ProgressBar
+@onready var damageLabelIndicator = $DamageLabelIndicator
 
 var direction_x : float = 1.0
 var direction: Vector2
@@ -78,6 +79,7 @@ func take_damage(damage_amount: int):
 		return
 		
 	health -= damage_amount
+	damageLabelIndicator.show_damage_label(-damage_amount)
 	print("Boss took ", damage_amount, " damage! HP left: ", health)
 	if health > 0 and not defeat:
 		can_be_hurt = false

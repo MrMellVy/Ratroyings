@@ -6,6 +6,7 @@ class_name Player
 @export var PlayerCollider: CollisionShape2D
 var world_camera: Camera2D
 @onready var skill_damage_zone: Area2D = $SkillDamageZone
+@onready var damageLabelIndicator = $DamageLabelIndicator
 
 # Horizontal Movement
 @export_category("Movement")
@@ -526,6 +527,7 @@ func take_damage(value, push_direction, is_boss: bool = false):
 		handle_defeat_animation()
 	else:
 		handle_hurt_animation()
+		damageLabelIndicator.show_damage_label(-value)
 		take_damage_cooldown(0.5)
 
 func handle_hurt_animation():
@@ -704,6 +706,7 @@ func can_wall_interact() -> bool:
 func heal(amount: int) -> void:
 	health += amount
 	health = min(health, health_max)
+	damageLabelIndicator.show_damage_label(amount)
 	print("Healed for ", amount, "! Current HP: ", health)
 
 func perform_skill_a():
