@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ratroyings"
-config/description="The Rats are attacking the city!? Clean the pests."
+config/description="The Rats are attacking the city!? Clean the pests. Save the city."
 config/version="1.0.0.3"
 run/main_scene="uid://dnhdvxp66r0sr"
 config/features=PackedStringArray("4.7", "Forward Plus")
