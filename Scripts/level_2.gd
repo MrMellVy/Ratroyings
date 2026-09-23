@@ -223,8 +223,8 @@ func position_to_next_wave():
 				current_air_wave_batches = [1,1,1]
 			4:
 				if Global.is_demo_mode:
-					current_wave_batches = [2,1]
-					current_air_wave_batches =[1,1]
+					current_wave_batches = [2,2]
+					current_air_wave_batches =[2,2]
 				else:
 					current_wave_batches = [1,2,1]
 					current_air_wave_batches = [1,2,1]
