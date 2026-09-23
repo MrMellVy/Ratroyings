@@ -220,7 +220,10 @@ func use_skill_a(target: CharacterBody2D) -> void:
 	modulate = Color.YELLOW
 	play_anim_attack("skill_a")
 	
+	if not is_inside_tree(): return
 	await get_tree().create_timer(0.35).timeout
+	
+	if not is_inside_tree(): return
 	
 	if not is_valid_target(target):
 		is_using_skill = false
@@ -247,8 +250,10 @@ func use_skill_a(target: CharacterBody2D) -> void:
 		for enemy in enemies:
 			if is_valid_target(enemy):
 				enemy.take_damage(skill_damage)
-			
-			await get_tree().create_timer(0.15).timeout
+		if not is_inside_tree(): return
+		await get_tree().create_timer(0.15).timeout
+		
+		if not is_inside_tree(): return
 		
 		is_skill_dashing = false
 		skill_dash_dir = 0.0

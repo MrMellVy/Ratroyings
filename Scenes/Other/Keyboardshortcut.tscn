@@ -15,13 +15,14 @@ size_flags_vertical = 4
 color = Color(0.096204735, 0.09620475, 0.096204735, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1608220352]
-offset_left = 954.0
-offset_top = 618.0
-offset_right = 1190.0
-offset_bottom = 665.0
+offset_left = 646.0
+offset_top = 651.0
+offset_right = 1250.0
+offset_bottom = 698.0
 theme_override_fonts/font = ExtResource("1_hbee8")
 theme_override_font_sizes/font_size = 46
 text = "KEY_G5"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=1409526859]
 offset_left = 426.0
@@ -64,9 +65,9 @@ text = "KEY_G4"
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="." unique_id=1232018241]
-offset_left = 407.0
+offset_left = 299.0
 offset_top = 495.0
-offset_right = 889.0
+offset_right = 1005.0
 offset_bottom = 542.0
 theme_override_fonts/font = ExtResource("1_hbee8")
 theme_override_font_sizes/font_size = 46

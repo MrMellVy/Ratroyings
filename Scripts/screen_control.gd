@@ -1,4 +1,5 @@
 extends OptionButton
+@onready var screen_control_option_button: OptionButton = $"."
 
 func _ready() -> void:
 	if not item_selected.is_connected(_on_item_selected):
@@ -10,7 +11,11 @@ func _ready() -> void:
 		add_item("Exclusive Fullscreen", 2)
 	
 	_show_item_selected()
-
+	var popup = screen_control_option_button.get_popup()
+	var my_custom_font = screen_control_option_button.get_theme_font("font")
+	popup.add_theme_font_override("font", my_custom_font)
+	popup.add_theme_font_size_override("font_size", 18)
+	
 func _on_item_selected(index: int) -> void:
 	var window_modes = [
 		DisplayServer.WINDOW_MODE_WINDOWED,

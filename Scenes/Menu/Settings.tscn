@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://i6vri7kwh8cb"]
 
 [ext_resource type="Script" uid="uid://brsu23raocfag" path="res://Scripts/settings.gd" id="1_fblaw"]
+[ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="2_wi6js"]
 [ext_resource type="Script" uid="uid://bpbwoxapxlqt3" path="res://Scripts/screen_control.gd" id="5_afaf4"]
 [ext_resource type="Script" uid="uid://dejalsvyqh2ly" path="res://Scripts/window_control.gd" id="6_o14jo"]
 [ext_resource type="Texture2D" uid="uid://wy6esn46mm0b" path="res://Assets/Other/Tweak/Grabber.png" id="7_j0jkk"]
@@ -53,10 +54,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 36
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 
 [node name="KEY_WINDOW" type="TabBar" parent="Settings" unique_id=1395132641]
+visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 tab_alignment = 1
 metadata/_tab_index = 0
 
@@ -82,6 +85,7 @@ offset_top = 10.0
 offset_right = 46.5
 offset_bottom = 44.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 35
 text = "KEY_WINDOW"
 horizontal_alignment = 1
@@ -94,6 +98,7 @@ offset_top = 99.0
 offset_right = 750.6197
 offset_bottom = 130.0
 scale = Vector2(1.91, 1.91)
+theme_override_fonts/font = ExtResource("2_wi6js")
 selected = 0
 item_count = 3
 popup/item_0/text = "Windowed"
@@ -113,6 +118,7 @@ offset_top = -2.0
 offset_right = -215.0
 offset_bottom = 32.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 19
 text = "KEY_Wmode"
 horizontal_alignment = 1
@@ -125,6 +131,7 @@ offset_top = 239.67
 offset_right = 750.62
 offset_bottom = 270.66998
 scale = Vector2(1.91, 1.91)
+theme_override_fonts/font = ExtResource("2_wi6js")
 item_count = 3
 popup/item_0/text = "Small"
 popup/item_0/id = 1
@@ -143,6 +150,7 @@ offset_top = -2.0
 offset_right = -215.0
 offset_bottom = 32.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 19
 text = "KEY_Wsize"
 horizontal_alignment = 1
@@ -151,6 +159,7 @@ vertical_alignment = 1
 [node name="KEY_SOUNDS" type="TabBar" parent="Settings" unique_id=1714482156]
 visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 tab_alignment = 1
 metadata/_tab_index = 1
 
@@ -176,6 +185,7 @@ offset_top = 20.0
 offset_right = 46.5
 offset_bottom = 54.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 51
 text = "BGM"
 horizontal_alignment = 1
@@ -191,6 +201,7 @@ offset_top = 165.0
 offset_right = 50.5
 offset_bottom = 247.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 59
 text = "SFX"
 horizontal_alignment = 1
@@ -220,12 +231,14 @@ anchor_left = 1.042
 anchor_top = 0.21400002
 anchor_right = 1.1830001
 anchor_bottom = 0.762
-offset_left = 0.07199097
-offset_top = 0.01199913
-offset_right = 0.02798462
-offset_bottom = -0.0040016174
+offset_left = 11.688141
+offset_top = -0.48800087
+offset_right = 11.6441345
+offset_bottom = 0.49599838
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
+theme_override_font_sizes/font_size = 23
 text = "0%"
 
 [node name="VolumeIcon" type="TextureButton" parent="Settings/KEY_SOUNDS/VBoxContainer/Control/AudioControl" unique_id=1290649332]
@@ -266,12 +279,14 @@ anchor_left = 1.042
 anchor_top = 0.21400002
 anchor_right = 1.1830001
 anchor_bottom = 0.762
-offset_left = 0.07199097
-offset_top = 0.01199913
-offset_right = 0.02798462
-offset_bottom = -0.0040016174
+offset_left = 11.688141
+offset_top = -0.48800087
+offset_right = 11.6441345
+offset_bottom = 0.49599838
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
+theme_override_font_sizes/font_size = 23
 text = "0%"
 
 [node name="SFXIcon" type="TextureButton" parent="Settings/KEY_SOUNDS/VBoxContainer/Control/SFXControl" unique_id=2079366788]
@@ -289,8 +304,8 @@ scale = Vector2(1.6, 1.6)
 texture_normal = ExtResource("9_mna3m")
 
 [node name="KEY_LANGUAGE" type="TabBar" parent="Settings" unique_id=684116989]
-visible = false
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 tab_alignment = 1
 metadata/_tab_index = 2
 
@@ -318,6 +333,7 @@ offset_top = 10.0
 offset_right = 46.5
 offset_bottom = 44.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 35
 text = "KEY_LANGUAGE"
 horizontal_alignment = 1
@@ -330,16 +346,18 @@ offset_top = 99.0
 offset_right = 750.6197
 offset_bottom = 130.0
 scale = Vector2(1.91, 1.91)
+theme_override_fonts/font = ExtResource("2_wi6js")
 
 [node name="Label" type="Label" parent="Settings/KEY_LANGUAGE/VBoxContainer/Control/Language" unique_id=1560056172]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = -247.0
+offset_left = -282.21286
 offset_top = -2.0
-offset_right = -215.0
+offset_right = -253.21262
 offset_bottom = 32.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 19
 text = "KEY_LANGUAGE"
 horizontal_alignment = 1
@@ -361,6 +379,8 @@ grow_vertical = 0
 scale = Vector2(1.675, 1.675)
 pivot_offset = Vector2(69.552246, 15.522369)
 theme_override_colors/font_color = Color(0.009324101, 0.009324101, 0.009324101, 1)
+theme_override_fonts/font = ExtResource("2_wi6js")
+theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_ehtkc")
 text = "KEY_BACK"
 

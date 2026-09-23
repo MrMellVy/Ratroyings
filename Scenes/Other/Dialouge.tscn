@@ -80,10 +80,10 @@ layout_mode = 0
 offset_left = 27.0
 offset_top = 15.0
 offset_right = 478.0
-offset_bottom = 59.0
+offset_bottom = 56.0
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_welnc")
-theme_override_font_sizes/normal_font_size = 41
+theme_override_font_sizes/normal_font_size = 38
 text = "NAME"
 
 [node name="Dialogue" type="RichTextLabel" parent="NinePatchRect" unique_id=2128816391]
@@ -91,7 +91,7 @@ layout_mode = 0
 offset_left = 33.0
 offset_top = 62.0
 offset_right = 926.0
-offset_bottom = 228.0
+offset_bottom = 208.0
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_welnc")
 theme_override_font_sizes/normal_font_size = 48
@@ -112,3 +112,20 @@ offset_right = -33.0
 offset_bottom = 220.0
 expand_mode = 1
 stretch_mode = 6
+
+[node name="Indicator" type="Label" parent="NinePatchRect" unique_id=372057598]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -59.0
+offset_top = -30.0
+offset_right = -23.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_welnc")
+theme_override_font_sizes/font_size = 25
+text = "Z ->"

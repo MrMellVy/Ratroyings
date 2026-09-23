@@ -1623,6 +1623,25 @@ MrMellVy"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="DemoLabel" type="Label" parent="." unique_id=1504130903]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -29.0
+offset_right = -68.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.78, 2.78)
+theme_override_fonts/font = ExtResource("21_egyys")
+text = "DEMONSTRATION MODE"
+horizontal_alignment = 1
+
 [connection signal="button_down" from="MainButtons/Button_Manager/Start" to="MainButtons/Button_Manager/Start" method="_on_button_down"]
 [connection signal="button_up" from="MainButtons/Button_Manager/Start" to="MainButtons/Button_Manager/Start" method="_on_button_up"]
 [connection signal="focus_entered" from="MainButtons/Button_Manager/Start" to="MainButtons/Button_Manager/Start" method="_on_focus_entered"]

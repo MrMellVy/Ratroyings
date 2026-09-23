@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 @export var language_option: OptionButton
+@onready var language_option_button: OptionButton = $Control/Language
 
 var languages := {
 	"English": "en",
@@ -18,6 +19,11 @@ func _ready() -> void:
 			language_option.select(i)
 			break
 
+	var popup = language_option_button.get_popup()
+	var my_custom_font = language_option_button.get_theme_font("font")
+	popup.add_theme_font_override("font", my_custom_font)
+	popup.add_theme_font_size_override("font_size", 18)
+	
 	language_option.item_selected.connect(_on_language_selected)
 	
 func _on_language_selected(index: int):

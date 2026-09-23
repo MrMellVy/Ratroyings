@@ -6,6 +6,7 @@ var size_values = [
 	Vector2i(1280,720),
 	Vector2i(1920,1080)
 ]
+@onready var window_control_option_button: OptionButton = $"."
 
 func _ready() -> void:
 	if not item_selected.is_connected(_on_item_selected):
@@ -16,8 +17,11 @@ func _ready() -> void:
 			add_item(size_names[i], i)
 	
 	_show_item_selected()
-
-
+	var popup = window_control_option_button.get_popup()
+	var my_custom_font = window_control_option_button.get_theme_font("font")
+	popup.add_theme_font_override("font", my_custom_font)
+	popup.add_theme_font_size_override("font_size", 18)
+	
 func _on_item_selected(index: int) -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	

@@ -47,6 +47,22 @@ func _ready() -> void:
 	
 	print("has save: ", Savedata.has_save(), ", scene path: ", Savedata.scene_path, ", valid save: ", Savedata.has_valid_save())
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_F9:
+		if not Global.is_demo_mode: 
+			print("SECRET DEMO ACTIVATED!")
+			Global.is_demo_mode = true
+			
+			if has_node("DemoLabel"):
+				$DemoLabel.visible = true
+			
+			button_type = "demo"
+			$Fade_transition.show()
+			$Fade_transition/fade_timer.start()
+			$Fade_transition/Fade_transition/AnimationPlayer.play("Fade_in")
+		return
+	# ---------------------
+
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):
 		if not esc_reset_done:
@@ -175,6 +191,13 @@ func _on_fade_timer_timeout() -> void:
 		get_tree().change_scene_to_file(Savedata.scene_path)
 	elif button_type == "exit" :
 		get_tree().quit()
+	elif  button_type == "demo":
+		Global.gameStarted = true
+		Global.is_continuing = true
+		Global.saved_wave = 4
+		Global.saved_player_health = 150
+		Global.saved_player_damage_bonus = 20
+		get_tree().change_scene_to_file("res://Scenes/Other/Keyboardshortcut.tscn")
 	elif fade_startup == true:
 		$Fade_transition.hide()
 		

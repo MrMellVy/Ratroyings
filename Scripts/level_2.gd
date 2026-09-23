@@ -219,11 +219,15 @@ func position_to_next_wave():
 		
 		match current_wave:
 			3:
-				current_wave_batches = [3,4,4]
-				current_air_wave_batches = [2,3,3]
+				current_wave_batches = [2,2,1]
+				current_air_wave_batches = [1,1,1]
 			4:
-				current_wave_batches = [3,3,3]
-				current_air_wave_batches = [2,3,2]
+				if Global.is_demo_mode:
+					current_wave_batches = [2,1]
+					current_air_wave_batches =[1,1]
+				else:
+					current_wave_batches = [1,2,1]
+					current_air_wave_batches = [1,2,1]
 			_:
 				current_wave_batches = [1,1]
 				current_air_wave_batches = [1,1]

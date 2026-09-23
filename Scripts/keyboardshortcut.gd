@@ -6,4 +6,5 @@ func _input(event: InputEvent) -> void:
 
 func close_screen() -> void:
 	queue_free()
+
 	get_tree().change_scene_to_file("res://Scenes/Cutscene/cutscene_1.tscn")

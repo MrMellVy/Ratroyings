@@ -14,7 +14,15 @@ var max_lines: int = 8
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Savedata.save_cutscene_checkpoint("res://Scenes/Cutscene/cutscene_1.tscn")
+	if Global.is_demo_mode:
+		Savedata.save_checkpoint(
+			"res://Scenes/Cutscene/cutscene_1.tscn",
+			4,
+			150,
+			20
+		)
+	else:
+		Savedata.save_cutscene_checkpoint("res://Scenes/Cutscene/cutscene_1.tscn")
 	$Fade_transition.show()    
 	$Fade_transition/Fade_transition/AnimationPlayer.play("Fade_out")
 	BgmManager.play_BGM("cyberpunk-street")
@@ -44,6 +52,8 @@ func start() -> void:
 	dialogue_is_active = false
 	if animation_player.is_playing() or animation_player_2.is_playing():
 		await animation_player.animation_finished
-		
-	get_tree().change_scene_to_file("res://Scenes/Level/level_1.tscn")
+	if Global.is_demo_mode:
+		get_tree().change_scene_to_file("res://Scenes/Level/level_2.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/Level/level_1.tscn")
 	
