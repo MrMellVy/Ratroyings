@@ -437,26 +437,26 @@ func open_path_to_zone_3():
 	tween.tween_property(world_camera, "limit_right", 1463, 2.0).set_trans(Tween.TRANS_SINE)
 
 func show_skill_label() -> void:
-	$Player/Label3.modulate.a = 1.0
-	$Player/Label3.show()
+	$Player/CanvasLayer/Label3.modulate.a = 1.0
+	$Player/CanvasLayer/Label3.show()
 
 	await get_tree().create_timer(5.0).timeout
 	
 	var tween = create_tween()
-	tween.tween_property($Player/Label3, "modulate:a", 0.0, 1.0)
+	tween.tween_property($Player/CanvasLayer/Label3, "modulate:a", 0.0, 1.0)
 	
 	await  tween.finished
-	$Player/Label3.hide()
+	$Player/CanvasLayer/Label3.hide()
 	await get_tree().create_timer(1.0).timeout
-	$Player/Label2.modulate.a = 1.0
-	$Player/Label2.show()
+	$Player/CanvasLayer/Label2.modulate.a = 1.0
+	$Player/CanvasLayer/Label2.show()
 
 	await get_tree().create_timer(5.0).timeout
 	var tween2 = create_tween()
-	tween2.tween_property($Player/Label2, "modulate:a", 0.0, 1.0)
+	tween2.tween_property($Player/CanvasLayer/Label2, "modulate:a", 0.0, 1.0)
 	
 	await  tween.finished
-	$Player/Label2.hide()
+	$Player/CanvasLayer/Label2.hide()
 
 func _on_timer_health_power_up_timeout() -> void:
 	var active_powerups = get_tree().get_nodes_in_group("health_powerups")

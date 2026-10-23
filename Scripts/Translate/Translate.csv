@@ -14,7 +14,7 @@ KEY_Zone,Zone ,Zona
 KEY_CurZone,Current Zone: ,Zona sekarang: 
 KEY_CurScore,Current Score: ,Skor sekarang: 
 KEY_GO,GO - >,LANJUT - >
-KEY_CSK,"PRESS 'C"" To use skill!",Tekan 'C' untuk menggunakan jurus!
+KEY_CSK,PRESS 'C' To use skill!,Tekan 'C' untuk menggunakan jurus!
 KEY_DASHA,PRESS 'Z + SHIFT' To use Dash attack!,Tekan  'Z + SHIFT' untuk menerjang
 KEY_G1,Z - ATTACK,Z - MENYERANG
 KEY_G2,SHIFT - DASH,SHIFT - Menerjang

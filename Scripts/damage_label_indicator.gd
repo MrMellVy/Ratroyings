@@ -23,8 +23,10 @@ func _create_indicator_label(damage) -> Label:
 		newLabel.text = str(damage)
 		
 		if get_parent().is_in_group("enemies"):
+			newLabel.text = str(abs(damage))
 			newLabel.add_theme_color_override("font_color", Color(0.775, 0.0, 0.319, 1.0)) 
 		else:
+			newLabel.text = str(damage)
 			newLabel.add_theme_color_override("font_color", Color(1.0, 0.357, 0.29, 1.0)) 
 		
 	newLabel.add_theme_font_size_override("font_size", 24)

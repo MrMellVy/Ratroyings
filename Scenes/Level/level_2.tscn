@@ -1020,6 +1020,18 @@ size = Vector2(24, 669.4375)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akeww"]
 size = Vector2(51, 259)
 
+[sub_resource type="LabelSettings" id="LabelSettings_rc20r"]
+font = ExtResource("16_rc20r")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_2v0nq"]
+font = ExtResource("16_rc20r")
+font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_36kwd"]
+font = ExtResource("16_rc20r")
+font_size = 24
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_t8rx8"]
 vertices = PackedVector2Array(1372, 149.00781, -423.7578, 151.97656, -423.21875, 128.96094, 1372, 123.03125)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
@@ -1215,37 +1227,38 @@ position = Vector2(737, 36)
 shape = SubResource("RectangleShape2D_akeww")
 
 [node name="Player" parent="." unique_id=1296403870 instance=ExtResource("12_53c2y")]
-position = Vector2(-412, 166)
+position = Vector2(-371, 159)
 collision_mask = 78
 jumps = 2
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=327706906]
+
+[node name="Label2" type="Label" parent="Player/CanvasLayer" unique_id=650669713]
+visible = false
+offset_left = 349.0
+offset_top = 599.0
+offset_right = 922.0
+offset_bottom = 647.0
+text = "KEY_CSK"
+label_settings = SubResource("LabelSettings_rc20r")
+
+[node name="Label3" type="Label" parent="Player/CanvasLayer" unique_id=304122559]
+offset_left = 193.0
+offset_top = 603.0
+offset_right = 891.0
+offset_bottom = 645.0
+text = "KEY_DASHA"
+label_settings = SubResource("LabelSettings_2v0nq")
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="Player" unique_id=419576241]
 visible = false
-offset_left = -21.0
-offset_top = 7.0
-offset_right = 20.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("16_rc20r")
+offset_left = -50.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 28.0
 text = "KEY_GO"
-
-[node name="Label2" type="Label" parent="Player" unique_id=650669713]
-visible = false
-offset_left = -103.0
-offset_top = 10.0
-offset_right = 102.0
-offset_bottom = 26.0
-theme_override_fonts/font = ExtResource("16_rc20r")
-text = "KEY_CSK"
-
-[node name="Label3" type="Label" parent="Player" unique_id=304122559]
-visible = false
-offset_left = -102.0
-offset_top = 13.0
-offset_right = 103.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("16_rc20r")
-theme_override_font_sizes/font_size = 10
-text = "KEY_DASHA"
+label_settings = SubResource("LabelSettings_36kwd")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=895766117]
 position = Vector2(164, 159)
