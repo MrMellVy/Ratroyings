@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcu5cg7ht5ctp"]
 
 [ext_resource type="Texture2D" uid="uid://d2w04og03l3gl" path="res://Assets/Other/Tweak/SlimeFly.png" id="1_qo0sm"]
-[ext_resource type="Script" uid="uid://cvk43bja3h72r" path="res://Scripts/skillbuttonmodif.gd" id="2_qo0sm"]
+[ext_resource type="Script" uid="uid://cvk43bja3h72r" path="res://Scripts/ui/skillbuttonmodif.gd" id="2_qo0sm"]
 [ext_resource type="Texture2D" uid="uid://b034awq7mnrf6" path="res://Assets/Other/Tweak/white-01.png" id="3_v76ym"]
 [ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="4_sehqr"]
 

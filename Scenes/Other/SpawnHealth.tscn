@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhki26frbxu88"]
 
-[ext_resource type="Script" uid="uid://bwef6dok2l31b" path="res://Scripts/spawn_health.gd" id="1_u0nel"]
+[ext_resource type="Script" uid="uid://bwef6dok2l31b" path="res://Scripts/enemies/spawn_health.gd" id="1_u0nel"]
 [ext_resource type="Texture2D" uid="uid://naxpg8gs4nri" path="res://Assets/Sprites/PowerUps/PowerUps.png" id="2_vrklq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vrklq"]

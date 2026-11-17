@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://i6vri7kwh8cb"]
 
-[ext_resource type="Script" uid="uid://brsu23raocfag" path="res://Scripts/settings.gd" id="1_fblaw"]
-[ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="2_wi6js"]
-[ext_resource type="Script" uid="uid://bpbwoxapxlqt3" path="res://Scripts/screen_control.gd" id="5_afaf4"]
-[ext_resource type="Script" uid="uid://dejalsvyqh2ly" path="res://Scripts/window_control.gd" id="6_o14jo"]
-[ext_resource type="Texture2D" uid="uid://wy6esn46mm0b" path="res://Assets/Other/Tweak/Grabber.png" id="7_j0jkk"]
-[ext_resource type="Script" uid="uid://cy6e6f1wg5s58" path="res://Scripts/audio_control.gd" id="8_egbht"]
+[ext_resource type="Script" uid="uid://brsu23raocfag" path="res://Scripts/ui/settings.gd" id="1_fblaw"]
+[ext_resource type="FontFile" uid="uid://dd2xy2gqkryyj" path="res://Assets/Fonts/Ririgitriz.ttf" id="2_wi6js"]
+[ext_resource type="Script" uid="uid://bpbwoxapxlqt3" path="res://Scripts/ui/screen_control.gd" id="5_afaf4"]
+[ext_resource type="Script" uid="uid://dejalsvyqh2ly" path="res://Scripts/ui/window_control.gd" id="6_o14jo"]
+[ext_resource type="Texture2D" uid="uid://b23fs2ti15yfd" path="res://Assets/Other/Tweak/Grabber.png" id="7_j0jkk"]
+[ext_resource type="Script" uid="uid://cy6e6f1wg5s58" path="res://Scripts/ui/audio_control.gd" id="8_egbht"]
 [ext_resource type="Texture2D" uid="uid://4vi7vfmn4j81" path="res://Assets/Other/Tweak/Volume Ori/Volume.png" id="9_mna3m"]
-[ext_resource type="Script" uid="uid://ospuvieprdcc" path="res://Scripts/sfx_control.gd" id="10_tr27g"]
-[ext_resource type="Script" uid="uid://buytacwayv54w" path="res://Scripts/LanguageSettings.gd" id="11_ann11"]
+[ext_resource type="Script" uid="uid://ospuvieprdcc" path="res://Scripts/ui/sfx_control.gd" id="10_tr27g"]
+[ext_resource type="Script" uid="uid://buytacwayv54w" path="res://Scripts/ui/LanguageSettings.gd" id="11_ann11"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_6dk6o"]
 color = Color(0.41598046, 0.41598046, 0.41598028, 1)
@@ -52,6 +52,7 @@ offset_top = 36.0
 offset_right = -93.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wi6js")
 theme_override_font_sizes/font_size = 36
 tab_alignment = 1
 current_tab = 2

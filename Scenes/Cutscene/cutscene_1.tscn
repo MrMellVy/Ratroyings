@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://4oauhdrwbyyc"]
 
-[ext_resource type="Script" uid="uid://drim8v86215hr" path="res://Scripts/cutscene_1.gd" id="1_g2k7w"]
+[ext_resource type="Script" uid="uid://drim8v86215hr" path="res://Scripts/cutscenes/cutscene_1.gd" id="1_g2k7w"]
 [ext_resource type="Texture2D" uid="uid://ck8ryb16wtmbn" path="res://Assets/Tilesets/City/Buildings.png" id="1_hav6f"]
 [ext_resource type="Texture2D" uid="uid://dpui6y2i7aj56" path="res://Assets/Tilesets/City/Roads.png" id="2_g2k7w"]
 [ext_resource type="Texture2D" uid="uid://cf8lxwsdblm8" path="res://Assets/Background/Day/Background.png" id="2_y02wl"]

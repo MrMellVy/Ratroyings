@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byp2g67igx83u"]
 
-[ext_resource type="Script" uid="uid://cr6n4hu1do643" path="res://Scripts/DialogouePlayer.gd" id="1_3lq5a"]
+[ext_resource type="Script" uid="uid://cr6n4hu1do643" path="res://Scripts/autoload/DialogouePlayer.gd" id="1_3lq5a"]
 [ext_resource type="Texture2D" uid="uid://bqhtc7adiqaf1" path="res://Assets/Sprites/Boxes/Dialougebox.png" id="1_q7pqq"]
 [ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="3_welnc"]
 

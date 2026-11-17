@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7w5ldp1n0qke"]
 
-[ext_resource type="Script" uid="uid://r1guuhemste8" path="res://Scripts/air_enemy.gd" id="1_6y317"]
+[ext_resource type="Script" uid="uid://r1guuhemste8" path="res://Scripts/enemies/air_enemy.gd" id="1_6y317"]
 [ext_resource type="Texture2D" uid="uid://o2ar1fg7bob0" path="res://Assets/Sprites/EnemyAir/Original/Mosquitoidle.png" id="1_y2haa"]
 [ext_resource type="Shader" uid="uid://coiyd03hra4c5" path="res://Assets/Shader/hiteffect.gdshader" id="2_0m13u"]
 [ext_resource type="Texture2D" uid="uid://bi2fh7qkaad10" path="res://Assets/Sprites/EnemyAir/Original/Mosquitoatk.png" id="2_6y317"]

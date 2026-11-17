@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c54kagu1vnr2s"]
 
-[ext_resource type="Script" uid="uid://2uyi7fqn4ogn" path="res://Scripts/level_3.gd" id="1_gd4xb"]
+[ext_resource type="Script" uid="uid://2uyi7fqn4ogn" path="res://Scripts/levels/level_3.gd" id="1_gd4xb"]
 [ext_resource type="Texture2D" uid="uid://qitpc1vbylc3" path="res://Assets/Tilesets/Lab/lab_background.png" id="1_nci04"]
 [ext_resource type="Texture2D" uid="uid://bqw3yvdfkg3sk" path="res://Assets/Tilesets/Lab/lab_floor.png" id="1_xgn08"]
 [ext_resource type="PackedScene" uid="uid://b8w4kw2ipi6o8" path="res://Scenes/character/enemy.tscn" id="2_nvu4a"]

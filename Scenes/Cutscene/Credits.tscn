@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8kq5swb4tdlx"]
 
-[ext_resource type="Script" uid="uid://cmuu4v2sftqqo" path="res://Scripts/credits.gd" id="1_gbnyi"]
+[ext_resource type="Script" uid="uid://cmuu4v2sftqqo" path="res://Scripts/cutscenes/credits.gd" id="1_gbnyi"]
 [ext_resource type="Texture2D" uid="uid://dshg88t21fy5h" path="res://Assets/Other/Main Menu/Title/ratroyings.png" id="2_o641l"]
 [ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="3_0nwe0"]
 

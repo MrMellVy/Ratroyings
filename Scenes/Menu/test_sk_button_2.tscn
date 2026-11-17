@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://clxe4hkd427ln"]
 
-[ext_resource type="Script" uid="uid://d86byr4rvopu" path="res://Scripts/action_bar.gd" id="1_6ji53"]
+[ext_resource type="Script" uid="uid://d86byr4rvopu" path="res://Scripts/ui/action_bar.gd" id="1_6ji53"]
 [ext_resource type="PackedScene" uid="uid://bcu5cg7ht5ctp" path="res://Scenes/Other/skillbuttonmodif.tscn" id="2_6ji53"]
-[ext_resource type="Texture2D" uid="uid://drtd783jayqx2" path="res://Assets/Other/Tweak/Skill1.png" id="3_12v4n"]
+[ext_resource type="Texture2D" uid="uid://cn3lhh1tusmwy" path="res://Assets/Other/Tweak/Skill1.png" id="3_12v4n"]
 
 [node name="TestSkButton" type="Control" unique_id=97205223]
 layout_mode = 3

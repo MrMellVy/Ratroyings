@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bq5kt6xmwqepg"]
 
-[ext_resource type="Script" uid="uid://gno1ypmich71" path="res://Scripts/level_2.gd" id="1_8b42i"]
+[ext_resource type="Script" uid="uid://gno1ypmich71" path="res://Scripts/levels/level_2.gd" id="1_8b42i"]
 [ext_resource type="PackedScene" uid="uid://b8w4kw2ipi6o8" path="res://Scenes/character/enemy.tscn" id="2_d8j35"]
 [ext_resource type="PackedScene" uid="uid://b7w5ldp1n0qke" path="res://Scenes/character/air_enemy.tscn" id="3_d52fh"]
 [ext_resource type="Texture2D" uid="uid://cf8lxwsdblm8" path="res://Assets/Background/Day/Background.png" id="4_1kfys"]

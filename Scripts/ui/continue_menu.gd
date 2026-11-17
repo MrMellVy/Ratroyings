@@ -2,19 +2,12 @@ extends TextureButton
 
 var original_pos: Vector2
 var is_mouse_mode: bool = false
-@onready var animation_player: AnimationPlayer = $"../../../AnimationBSettings"
+@onready var animation_player: AnimationPlayer = $"../../../AnimationBContinue"
 
 
 func _ready() -> void:
+	grab_focus()
 	original_pos = position
-	mouse_entered.connect(_on_mouse_entered)
-	mouse_exited.connect(_on_mouse_exited)
-	
-	focus_entered.connect(_on_focus_entered)
-	focus_exited.connect(_on_focus_exited)
-	
-	button_down.connect(_on_button_down)
-	button_up.connect(_on_button_up)
 
 #To change mode, Mouse or Keyboard/Controller.
 func _input(event: InputEvent) -> void:
@@ -28,13 +21,13 @@ func _input(event: InputEvent) -> void:
 			grab_focus() 
 
 func _on_mouse_entered() -> void:
-	animation_player.play("buttonsettings")
+	animation_player.play("buttoncontinue")
 
 func _on_mouse_exited() -> void:
 	animation_player.stop()
 
 func _on_focus_entered() -> void:
-	animation_player.play("buttonsettings")
+	animation_player.play("buttoncontinue")
 
 func _on_focus_exited() -> void:
 	animation_player.stop()
@@ -42,7 +35,7 @@ func _on_focus_exited() -> void:
 func _on_button_down() -> void:
 	animation_player.stop()
 	if not is_mouse_mode:
-		animation_player.play("ButtonSettingsPressed")
+		animation_player.play("buttoncontinuePressed")
 		await  animation_player.animation_finished
 		
 func _on_button_up() -> void:

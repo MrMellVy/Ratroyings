@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dr8q2mlsjy2m1"]
 
-[ext_resource type="Script" uid="uid://doq7jtmw12dtb" path="res://Scripts/testcamera_transition.gd" id="1_pmcao"]
+[ext_resource type="Script" uid="uid://doq7jtmw12dtb" path="res://Scripts/levels/testcamera_transition.gd" id="1_pmcao"]
 
 [sub_resource type="Gradient" id="Gradient_ow83s"]
 colors = PackedColorArray(0, 0.23137255, 0, 1, 1, 1, 0.53333336, 0.6313726)

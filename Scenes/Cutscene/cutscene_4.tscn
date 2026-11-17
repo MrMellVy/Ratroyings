@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bp5e2umibn6ps"]
 
-[ext_resource type="Script" uid="uid://chwgok72485du" path="res://Scripts/cutscene_4.gd" id="1_cw48c"]
+[ext_resource type="Script" uid="uid://chwgok72485du" path="res://Scripts/cutscenes/cutscene_4.gd" id="1_cw48c"]
 [ext_resource type="Texture2D" uid="uid://cf8lxwsdblm8" path="res://Assets/Background/Day/Background.png" id="2_kath6"]
 [ext_resource type="Texture2D" uid="uid://ch50ooqblafik" path="res://Assets/Background/Day/Cloud1.png" id="3_1bp6q"]
 [ext_resource type="Texture2D" uid="uid://ck8ryb16wtmbn" path="res://Assets/Tilesets/City/Buildings.png" id="4_55l2s"]

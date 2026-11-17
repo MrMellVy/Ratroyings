@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3qoe5fyucafc"]
 
-[ext_resource type="Script" uid="uid://cspyhcat1dh84" path="res://Scripts/enemy_dummy_damage.gd" id="1_uxw1c"]
+[ext_resource type="Script" uid="uid://cspyhcat1dh84" path="res://Scripts/enemies/enemy_dummy_damage.gd" id="1_uxw1c"]
 [ext_resource type="Texture2D" uid="uid://v8g20jcrsbsa" path="res://Assets/Sprites/Enemy/Original/tikus serang.png" id="2_pgb4d"]
 [ext_resource type="Texture2D" uid="uid://gvdtyk858a6a" path="res://Assets/Sprites/Enemy/Original/tikusdefeat.png" id="3_2iso1"]
 [ext_resource type="Texture2D" uid="uid://nquhb6vqtgq" path="res://Assets/Sprites/Enemy/Original/tikushitted.png" id="4_4w0qx"]

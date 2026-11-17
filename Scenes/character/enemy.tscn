@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8w4kw2ipi6o8"]
 
-[ext_resource type="Script" uid="uid://1qbo87k3n7ci" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://1qbo87k3n7ci" path="res://Scripts/enemies/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://v8g20jcrsbsa" path="res://Assets/Sprites/Enemy/Original/tikus serang.png" id="2_1dp5w"]
 [ext_resource type="Texture2D" uid="uid://gvdtyk858a6a" path="res://Assets/Sprites/Enemy/Original/tikusdefeat.png" id="2_287tu"]
 [ext_resource type="PackedScene" uid="uid://duuff8qd42t81" path="res://Scenes/Other/health_bar.tscn" id="3_afpow"]

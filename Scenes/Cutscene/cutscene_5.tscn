@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c38lmv2l6o535"]
 
-[ext_resource type="Script" uid="uid://bb15uhaeuiiq0" path="res://Scripts/cutscene_5.gd" id="1_1mjem"]
+[ext_resource type="Script" uid="uid://bb15uhaeuiiq0" path="res://Scripts/cutscenes/cutscene_5.gd" id="1_1mjem"]
 [ext_resource type="Texture2D" uid="uid://cf8lxwsdblm8" path="res://Assets/Background/Day/Background.png" id="2_xum5b"]
 [ext_resource type="Texture2D" uid="uid://ch50ooqblafik" path="res://Assets/Background/Day/Cloud1.png" id="3_t28s1"]
 [ext_resource type="Texture2D" uid="uid://iepruljllsro" path="res://Assets/Sprites/Enemy/Original/tikus mati.png" id="8_1mjem"]

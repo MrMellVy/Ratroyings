@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://w7doc70s2ixt"]
 
-[ext_resource type="Script" uid="uid://u056f26uw1lh" path="res://Scripts/player.gd" id="1_3smsa"]
+[ext_resource type="Script" uid="uid://u056f26uw1lh" path="res://Scripts/player/player.gd" id="1_3smsa"]
 [ext_resource type="Texture2D" uid="uid://dris6r0wcmgkl" path="res://Assets/Sprites/Player/Dash.png" id="1_x3wgy"]
 [ext_resource type="Shader" uid="uid://coiyd03hra4c5" path="res://Assets/Shader/hiteffect.gdshader" id="2_0gysh"]
 [ext_resource type="Texture2D" uid="uid://bm68arcbrtkr" path="res://Assets/Sprites/Player/Die.png" id="2_3smsa"]

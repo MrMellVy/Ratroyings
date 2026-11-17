@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btq7gsgv2ek0a"]
 
-[ext_resource type="Script" uid="uid://ftqtqj18xnky" path="res://Scripts/keyboardshortcut.gd" id="1_57hv4"]
+[ext_resource type="Script" uid="uid://ftqtqj18xnky" path="res://Scripts/input/keyboardshortcut.gd" id="1_57hv4"]
 [ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="1_hbee8"]
 [ext_resource type="PackedScene" uid="uid://bhik0cbrtt1bx" path="res://Scenes/Menu/pause_menu.tscn" id="3_5w3gl"]
 

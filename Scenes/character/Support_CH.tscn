@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ca0uhuktjhjrw"]
 
-[ext_resource type="Script" uid="uid://dq64un8f463vb" path="res://Scripts/Support_CH.gd" id="1_telfh"]
+[ext_resource type="Script" uid="uid://dq64un8f463vb" path="res://Scripts/support/Support_CH.gd" id="1_telfh"]
 [ext_resource type="Texture2D" uid="uid://bwk83xn78hxyl" path="res://Assets/Sprites/SupportPlayer/nashr_idle_b.png" id="2_telfh"]
 [ext_resource type="Texture2D" uid="uid://sppablolg7rn" path="res://Assets/Sprites/SupportPlayer/nashr_atk1.png" id="2_xl1fm"]
 [ext_resource type="Texture2D" uid="uid://btjctl1p0fpsg" path="res://Assets/Sprites/SupportPlayer/nashr_atk2.png" id="3_ks5nv"]
