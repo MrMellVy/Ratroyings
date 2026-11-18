@@ -1,8 +1,10 @@
 # Ratroyings
 The Rats are attacking the city!? Clean the pests, save the city.
-
-[![Downloads](https://img.shields.io/github/downloads/MrMellVy/Ratroyings/total?style=for-the-badge&label=DOWNLOADS&labelColor=555&color=4c1)](https://github.com/MrMellVy/Ratroyings/releases)
 Genre: 2D, Action, Platformer
+
+# Downloads
+[![Downloads](https://img.shields.io/github/downloads/MrMellVy/Ratroyings/total?style=for-the-badge&label=DOWNLOADS&labelColor=555&color=4c1)](https://github.com/MrMellVy/Ratroyings/releases)
+
 
 ## Licensing
 
