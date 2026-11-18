@@ -1,14 +1,14 @@
 [gd_scene format=4 uid="uid://bobpeucfnnfnk"]
 
-[ext_resource type="Texture2D" uid="uid://cf8lxwsdblm8" path="res://Assets/Background/Day/Background.png" id="2_0ty4y"]
-[ext_resource type="Texture2D" uid="uid://ch50ooqblafik" path="res://Assets/Background/Day/Cloud1.png" id="3_45lej"]
-[ext_resource type="Texture2D" uid="uid://ck8ryb16wtmbn" path="res://Assets/Tilesets/City/Buildings.png" id="6_0phwm"]
-[ext_resource type="Texture2D" uid="uid://bt3it2eeh8pcr" path="res://Assets/Tilesets/City/Buildings_2.png" id="7_2x7wv"]
-[ext_resource type="Texture2D" uid="uid://dpui6y2i7aj56" path="res://Assets/Tilesets/City/Roads.png" id="8_i6u4i"]
+[ext_resource type="Texture2D" uid="uid://bb00eynrvulr5" path="res://Assets/Background/Day/Background.png" id="2_0ty4y"]
+[ext_resource type="Texture2D" uid="uid://b61xsq3nsy3ov" path="res://Assets/Background/Day/Cloud1.png" id="3_45lej"]
+[ext_resource type="Texture2D" uid="uid://c1bgiiaybxlgi" path="res://Assets/Tilesets/City/Buildings.png" id="6_0phwm"]
+[ext_resource type="Texture2D" uid="uid://cjd2ge7o522gs" path="res://Assets/Tilesets/City/Buildings_2.png" id="7_2x7wv"]
+[ext_resource type="Texture2D" uid="uid://cvf3bgsan8y3p" path="res://Assets/Tilesets/City/Roads.png" id="8_i6u4i"]
 [ext_resource type="Script" uid="uid://bci4hi5lu3fat" path="res://Scripts/levels/DBG.gd" id="9_0ty4y"]
-[ext_resource type="Texture2D" uid="uid://dyhirno48mfiq" path="res://Assets/Tilesets/City/Platform-Sheet.png" id="9_gu6kt"]
+[ext_resource type="Texture2D" uid="uid://dx0xc72w8yhk3" path="res://Assets/Tilesets/City/Platform-Sheet.png" id="9_gu6kt"]
 [ext_resource type="PackedScene" uid="uid://83r0sj6dfeal" path="res://Scenes/character/boss.tscn" id="10_mdswu"]
-[ext_resource type="Texture2D" uid="uid://carjrejog3yx1" path="res://Assets/Tilesets/City/Car.png" id="10_o2plo"]
+[ext_resource type="Texture2D" uid="uid://de0e54knjityu" path="res://Assets/Tilesets/City/Car.png" id="10_o2plo"]
 [ext_resource type="PackedScene" uid="uid://ca0uhuktjhjrw" path="res://Scenes/character/Support_CH.tscn" id="10_tapar"]
 [ext_resource type="PackedScene" uid="uid://bhik0cbrtt1bx" path="res://Scenes/Menu/pause_menu.tscn" id="13_14fte"]
 [ext_resource type="PackedScene" uid="uid://w7doc70s2ixt" path="res://Scenes/character/player.tscn" id="14_ex2jc"]
@@ -955,7 +955,7 @@ shape = SubResource("RectangleShape2D_akeww")
 position = Vector2(-394, 166)
 navigation_polygon = SubResource("NavigationPolygon_1kfys")
 
-[node name="BossRat1" parent="." unique_id=1376914475 instance=ExtResource("10_mdswu")]
+[node name="BossRat" parent="." unique_id=1376914475 instance=ExtResource("10_mdswu")]
 position = Vector2(0, 118)
 collision_layer = 0
 collision_mask = 76

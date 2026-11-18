@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhoc04ca7xoh5"]
 
-[ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="1_x1tl0"]
+[ext_resource type="FontFile" uid="uid://dd2xy2gqkryyj" path="res://Assets/Fonts/Ririgitriz.ttf" id="1_x1tl0"]
 [ext_resource type="Script" uid="uid://bw5wocne5iwbg" path="res://Scripts/ui/currentscore_label.gd" id="2_ja1gn"]
 [ext_resource type="Script" uid="uid://dctbcwqp8g8ml" path="res://Scripts/ui/currentwave_label.gd" id="3_oujfp"]
 [ext_resource type="Script" uid="uid://cgriouykcipvs" path="res://Scripts/ui/middlecurrentwave_label.gd" id="4_ja1gn"]

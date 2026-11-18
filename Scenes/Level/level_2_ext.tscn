@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://crpb2vhctlm6b" path="res://Scripts/player/player-ext2.gd" id="2_dxjii"]
 [ext_resource type="Texture2D" uid="uid://de0e54knjityu" path="res://Assets/Tilesets/City/Car.png" id="3_2c0cb"]
 [ext_resource type="PackedScene" uid="uid://bhoc04ca7xoh5" path="res://Scenes/Other/ScoreWaveLabels.tscn" id="5_mfd5c"]
+[ext_resource type="FontFile" uid="uid://dd2xy2gqkryyj" path="res://Assets/Fonts/Ririgitriz.ttf" id="6_qss5r"]
 [ext_resource type="Script" uid="uid://cdrwmb21i8vti" path="res://Scripts/enemies/enemy_spawner_ext_2.gd" id="6_sqgo6"]
 [ext_resource type="PackedScene" uid="uid://7nop3g3cfg3k" path="res://Scenes/character/enemy-ext2.tscn" id="7_mfd5c"]
 
@@ -105,6 +106,12 @@ region = Rect2(110.61038, 0, 120.21071, 51.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfd5c"]
 size = Vector2(56, 3)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vlv3"]
+bg_color = Color(0.71659714, 0.004368443, 0.27068698, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoog1"]
+bg_color = Color(1, 0.3340433, 0.34739614, 1)
+
 [node name="Level_2-ext" type="Node2D" unique_id=1900110717]
 script = ExtResource("1_h68b3")
 
@@ -121,6 +128,7 @@ tile_set = SubResource("TileSet_3k1vp")
 script = ExtResource("2_dxjii")
 
 [node name="playerBody" type="Sprite2D" parent="Player" unique_id=674166015]
+z_index = 2
 position = Vector2(527, 0)
 texture = SubResource("AtlasTexture_3k1vp")
 flip_h = true
@@ -142,6 +150,36 @@ offset_right = 1280.0
 offset_bottom = 720.0
 
 [node name="scoreLabels" parent="Control" unique_id=969138735 instance=ExtResource("5_mfd5c")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1728024214]
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/CanvasLayer" unique_id=907569019]
+custom_minimum_size = Vector2(700, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -39.059998
+offset_right = 350.0
+offset_bottom = -12.059998
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_qss5r")
+theme_override_styles/background = SubResource("StyleBoxFlat_0vlv3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hoog1")
+value = 100.0
+
+[node name="Label" type="Label" parent="Control/CanvasLayer/ProgressBar" unique_id=1884332994]
+layout_mode = 1
+offset_left = 2.0
+offset_top = -40.940002
+offset_right = 265.0
+offset_bottom = -4.9400024
+theme_override_fonts/font = ExtResource("6_qss5r")
+theme_override_font_sizes/font_size = 36
+text = "Timer"
 
 [node name="EnemySpawner" type="Node2D" parent="." unique_id=583629496]
 script = ExtResource("6_sqgo6")
