@@ -219,22 +219,22 @@ func position_to_next_wave():
 		
 		match current_wave:
 			3:
-				current_wave_batches = [2,2,1]
+				current_wave_batches = [2,2,2]
 				current_air_wave_batches = [1,1,1]
 			4:
 				if Global.is_demo_mode:
 					current_wave_batches = [2,2]
-					current_air_wave_batches =[2,2]
+					current_air_wave_batches =[1,2]
 				else:
-					current_wave_batches = [1,2,1]
-					current_air_wave_batches = [1,2,1]
+					current_wave_batches = [1,2,2]
+					current_air_wave_batches = [2,2,3]
 			_:
 				current_wave_batches = [1,1]
 				current_air_wave_batches = [1,1]
 		current_batch_index = 0
 		#Fix for freeze bug happens when close the window.
 		if is_inside_tree():
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(0.1).timeout
 			if is_inside_tree():
 				spawn_next_batch()
 
@@ -315,6 +315,7 @@ func spawn_next_batch():
 	for i in range(air_count):
 		var air_enemy = airenemy_scene.instantiate()
 		air_enemy.z_index = 1
+		air_enemy.set_meta("batch_index", batch_index)
 
 		var index_SPoint = i % 3
 		if index_SPoint == 0:
@@ -323,17 +324,17 @@ func spawn_next_batch():
 			air_enemy.global_position = $AirEnemySpawnPoint2.global_position
 		else:
 			air_enemy.global_position = $AirEnemySpawnPoint3.global_position
+
 		if current_wave == 4:
-			if index_SPoint == 0:
+			if i % 2 == 0:
 				air_enemy.global_position = $AirEnemySpawnPoint4.global_position
-			elif index_SPoint == 1:
-				air_enemy.global_position = $AirEnemySpawnPoint5.global_position
 			else:
-				air_enemy.global_position = $AirEnemySpawnPoint6.global_position
+				air_enemy.global_position = $AirEnemySpawnPoint5.global_position
+
 		air_enemy.tree_exited.connect(_on_enemy_defeated.bind(air_enemy))
 		total_enemies_alive += 1
 		add_child(air_enemy)
-		await get_tree().create_timer(0.4).timeout 
+		await get_tree().create_timer(0.4).timeout
 	
 	current_batch_index += 1
 	is_spawning = false
@@ -355,8 +356,11 @@ func _on_enemy_defeated(enemy: Node):
 		if enemy.get_meta("batch_index") == active_batch_index:
 			batch_emy_defeated_count += 1
 			
-	if total_enemies_alive <= 0 and all_batches_spawned:
-		trigger_next_phase()
+	if total_enemies_alive <= 0:
+		if all_batches_spawned:
+			trigger_next_phase()
+		elif not is_spawning:
+			spawn_next_batch()
 		return
 	
 	_check_dynamic_spawn()

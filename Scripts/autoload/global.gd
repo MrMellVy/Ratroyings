@@ -21,6 +21,7 @@ var is_continuing: bool = false
 var saved_player_health: int = 100
 var saved_player_damage_bonus: int = 0
 var enemies_passive: bool = false
+var skip_to_boss_chase: bool = false
 
 var high_score = 0
 var current_score: int

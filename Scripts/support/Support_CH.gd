@@ -282,21 +282,21 @@ func debug_force_skill_a() -> void:
 
 func get_enemies_in_range(radius: float) -> Array:
 	var enemies: Array = []
+	if not is_inside_tree():
+		return enemies
+
 	for node: Node in get_tree().get_nodes_in_group("enemies"):
-		var enemy:= node as CharacterBody2D
-		
+		var enemy := node as CharacterBody2D
 		if enemy == null:
 			continue
-		
-		if not is_instance_valid(enemy) or enemy.defeat:
+		if not is_instance_valid(enemy) or not enemy.is_inside_tree() or enemy.defeat:
 			continue
-		
 		if global_position.distance_to(enemy.global_position) <= radius:
 			enemies.append(enemy)
 	return enemies
 
 func is_valid_target(target: CharacterBody2D) -> bool:
-	if not is_instance_valid(target):
+	if not is_instance_valid(target) or not target.is_inside_tree():
 		return false
 	if not target.has_method("take_damage"):
 		return false

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b8w4kw2ipi6o8"]
 
 [ext_resource type="Script" uid="uid://1qbo87k3n7ci" path="res://Scripts/enemies/enemy.gd" id="1_1f0kj"]
-[ext_resource type="Texture2D" uid="uid://v8g20jcrsbsa" path="res://Assets/Sprites/Enemy/Original/tikus serang.png" id="2_1dp5w"]
-[ext_resource type="Texture2D" uid="uid://gvdtyk858a6a" path="res://Assets/Sprites/Enemy/Original/tikusdefeat.png" id="2_287tu"]
+[ext_resource type="Texture2D" uid="uid://bve1oobseblxe" path="res://Assets/Sprites/Enemy/Original/tikus serang.png" id="2_1dp5w"]
+[ext_resource type="Texture2D" uid="uid://bcv58n35g4p6y" path="res://Assets/Sprites/Enemy/Original/tikusdefeat.png" id="2_287tu"]
 [ext_resource type="PackedScene" uid="uid://duuff8qd42t81" path="res://Scenes/Other/health_bar.tscn" id="3_afpow"]
-[ext_resource type="Texture2D" uid="uid://bwhymbt4xngq3" path="res://Assets/Sprites/Enemy/Original/tikusidle.png" id="4_0830c"]
-[ext_resource type="Texture2D" uid="uid://d21t2b4a6uue7" path="res://Assets/Sprites/Enemy/Original/tikus jalan.png" id="6_auwsv"]
+[ext_resource type="Texture2D" uid="uid://fghrthui1xwf" path="res://Assets/Sprites/Enemy/Original/tikusidle.png" id="4_0830c"]
+[ext_resource type="Texture2D" uid="uid://defhi4ix8ng6q" path="res://Assets/Sprites/Enemy/Original/tikus jalan.png" id="6_auwsv"]
 [ext_resource type="PackedScene" uid="uid://iht8j2jxjtk0" path="res://Scenes/Other/damage_label_indicator.tscn" id="8_7odo0"]
-[ext_resource type="AudioStream" uid="uid://db1dxeghnkorv" path="res://Assets/Audio/SFX/Hitsound.wav" id="8_skj07"]
+[ext_resource type="AudioStream" uid="uid://dhsqwrflspdsm" path="res://Assets/Audio/SFX/Hitsound.wav" id="8_skj07"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hghv2"]
 radius = 8.062258
@@ -560,6 +560,8 @@ stream_0/stream = ExtResource("8_skj07")
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_1f0kj")
+health_max = 80
+damage_to_deal = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=397538068]
 position = Vector2(0, 1)

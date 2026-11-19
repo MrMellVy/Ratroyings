@@ -16,8 +16,14 @@ var impact_shake_power: float = 0.0
 
 var dialogue_is_active: bool = true
 var max_lines: int = 5
+var is_returning_from_ext: bool = false
+var is_changing_scene: bool = false
+
+var _fade_layer: CanvasLayer
+var _fade_rect: ColorRect
 
 func _ready() -> void:
+	_setup_fade_overlay()
 	Savedata.save_cutscene_checkpoint("res://Scenes/Cutscene/cutscene_4.tscn")
 
 	BgmManager.play_BGM("cyberpunk-street")
@@ -41,27 +47,35 @@ func _ready() -> void:
 		$Player/Actionbar.process_mode = Node.PROCESS_MODE_DISABLED
 
 	$Player/PlayerHealthbar/HealthBarContainer/PlayerHP.visible = false
-	start()
+
+	if Global.skip_to_boss_chase:
+		Global.skip_to_boss_chase = false
+		is_returning_from_ext = true
+		dialogue_is_active = false
+		$WorldCameraTransition.make_current()
+		_fade_out()
+		await _on_dialogue_event("boss_chase")
+		if $AnimationPlayer.is_playing():
+			await $AnimationPlayer.animation_finished
+		await _fade_in()
+		Global.is_continuing = true
+		get_tree().change_scene_to_file("res://Scenes/Level/level_3.tscn")
+	else:
+		_fade_out()
+		start()
 
 func _process(delta: float) -> void:
 	if not TransitionTween or not TransitionTween.is_running():
-		
 		var total_shake = impact_shake_power + persistent_shake_power
-		
 		if total_shake > 0.0 and selected_camera:
 			var random_offset = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) * total_shake
 			transition_camera.global_transform.origin = selected_camera.global_transform.origin + random_offset
-			
 		elif total_shake == 0.0 and selected_camera:
 			transition_camera.global_transform.origin = selected_camera.global_transform.origin
 
 func _input(event: InputEvent) -> void:
-	if not dialogue_is_active:
+	if not dialogue_is_active or not anim_is_moving:
 		return
-
-	if not anim_is_moving:
-		return
-	
 	if event.is_action_pressed(advance_action):
 		if Dialouge.get_node("NinePatchRect/AnimationPlayer").is_playing():
 			return
@@ -112,6 +126,15 @@ func _on_dialogue_event(event_name: String) -> void:
 		Dialouge.set_process_unhandled_input(true)
 
 	elif event_name == "boss_chase":
+		if not is_returning_from_ext:
+			if is_changing_scene:
+				return
+			is_changing_scene = true
+			Dialouge.stop()
+			await _fade_in()
+			get_tree().change_scene_to_file("res://Scenes/Level/level_2_ext.tscn")
+			return
+
 		anim_is_moving = true
 		Dialouge.set_process_input(false)
 		Dialouge.set_process_unhandled_input(false)
@@ -121,22 +144,62 @@ func _on_dialogue_event(event_name: String) -> void:
 		$AnimationPlayer.play("event_car_and_boss")
 		await get_tree().create_timer(1.5).timeout
 		_change_camera($WorldCamera7, 0.0)
-		
-		
+
 func start() -> void:
 	$WorldCameraTransition.make_current()
 	_change_camera($WorldCamera)
 	Dialouge.start("CS_03")
-	await  Dialouge.dialogue_finished
+	await Dialouge.dialogue_finished
 	
 	dialogue_is_active = false
-	
+	if is_changing_scene:
+		return
+	is_changing_scene = true
+	await _fade_in()
 	Global.is_continuing = true
 	get_tree().change_scene_to_file("res://Scenes/Level/level_3.tscn")
 
+func _setup_fade_overlay() -> void:
+	if has_node("Fade_transition"):
+		return
+	_fade_layer = CanvasLayer.new()
+	_fade_layer.layer = 10
+	add_child(_fade_layer)
+
+	_fade_rect = ColorRect.new()
+	_fade_rect.color = Color(0, 0, 0, 1)
+	_fade_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_fade_rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_fade_layer.add_child(_fade_rect)
+
+func _fade_out(duration: float = 0.6) -> void:
+	if has_node("Fade_transition"):
+		$Fade_transition.show()
+		$Fade_transition.layer = 2
+		$Fade_transition/Fade_transition/AnimationPlayer.play("Fade_out_start")
+		await $Fade_transition/Fade_transition/AnimationPlayer.animation_finished
+		$Fade_transition.hide()
+		return
+	if is_instance_valid(_fade_rect):
+		_fade_rect.color.a = 1.0
+		var tween := create_tween()
+		tween.tween_property(_fade_rect, "color:a", 0.0, duration)
+		await tween.finished
+
+func _fade_in(duration: float = 0.6) -> void:
+	if has_node("Fade_transition"):
+		$Fade_transition.show()
+		$Fade_transition.layer = 2
+		$Fade_transition/Fade_transition/AnimationPlayer.play("Fade_in")
+		await $Fade_transition/Fade_transition/AnimationPlayer.animation_finished
+		return
+	if is_instance_valid(_fade_rect):
+		var tween := create_tween()
+		tween.tween_property(_fade_rect, "color:a", 1.0, duration)
+		await tween.finished
+
 func move_player_to_target(target_node: Node2D) -> void:
 	anim_is_moving = true
-	
 	var player = $Player
 	if target_node.global_position.x > player.global_position.x:
 		player.toggle_flip_sprite(1)
@@ -153,7 +216,6 @@ func move_player_to_target(target_node: Node2D) -> void:
 func move_support_to_target(target_node: Node2D) -> void:
 	anim_is_moving = true
 	Dialouge.set_process_input(false)
-	
 	var support = $SupportCH
 	if target_node.global_position.x > support.global_position.x:
 		support.change_direction(1)
@@ -171,11 +233,11 @@ func move_support_to_target(target_node: Node2D) -> void:
 func autosave_checkpoint():
 	Savedata.save_checkpoint(
 		"res://Scenes/Cutscene/cutscene_4.tscn",
+		1,
 		$Player.health,
 		$Player.damage_bonus,
 		Global.current_score
 	)
-
 
 func _change_camera(choose_camera: Camera2D, duration: float = 0.5, shake_power: float = 0.0, shake_duration: float = 0.5):
 	if TransitionTween:
@@ -193,9 +255,9 @@ func _change_camera(choose_camera: Camera2D, duration: float = 0.5, shake_power:
 	var move_step = func(weight: float):
 		var current_trans = target_transform
 		if duration > 0.0:
-				current_trans = start_transform.interpolate_with(target_transform, weight)
+			current_trans = start_transform.interpolate_with(target_transform, weight)
 		var total_shake = impact_shake_power + persistent_shake_power
-		var random_offset = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0,1.0)) * total_shake
+		var random_offset = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)) * total_shake
 		current_trans.origin += random_offset
 		transition_camera.global_transform = current_trans
 	var move_time = max(duration, 0.01)
@@ -219,7 +281,5 @@ func _change_camera(choose_camera: Camera2D, duration: float = 0.5, shake_power:
 	var target_rotation: float = choose_camera.global_rotation
 	TransitionRotationTween.tween_property(transition_camera, "rotation", target_rotation, duration).set_trans(Tween.TRANS_SINE)
 
-
 	selected_camera = choose_camera
-	
-	await  TransitionTween.finished
+	await TransitionTween.finished

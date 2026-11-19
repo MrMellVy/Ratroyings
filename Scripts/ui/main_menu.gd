@@ -48,20 +48,17 @@ func _ready() -> void:
 	print("has save: ", Savedata.has_save(), ", scene path: ", Savedata.scene_path, ", valid save: ", Savedata.has_valid_save())
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_F9:
-		if not Global.is_demo_mode: 
-			print("SECRET DEMO ACTIVATED!")
-			Global.is_demo_mode = true
-			
-			if has_node("DemoLabel"):
-				$DemoLabel.visible = true
+	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_F9:
+		Global.is_demo_mode = not Global.is_demo_mode
+		if has_node("DemoLabel"):
+			$DemoLabel.visible = Global.is_demo_mode
+			print("Demo Mode: ", Global.is_demo_mode)
 			
 			button_type = "demo"
 			$Fade_transition.show()
 			$Fade_transition/fade_timer.start()
 			$Fade_transition/Fade_transition/AnimationPlayer.play("Fade_in")
 		return
-	# ---------------------
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_cancel"):

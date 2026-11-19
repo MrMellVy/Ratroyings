@@ -25,7 +25,7 @@ func handle_transition():
 		Global.gameStarted = true
 		start_retry_from_autosave()
 	elif button_type == "menu" :
-		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Menu/main_menu.tscn")
 	elif fade_on == true:
 		$Fade_transition.hide()
 
@@ -42,6 +42,11 @@ func start_retry_from_autosave():
 	
 func _on_retry_pressed() -> void:
 	button_type = "retry"
+	BgmManager.stop()
+	BgmManager.GO_player.stop()
+	if BgmManager.GO_player.finished.is_connected(BgmManager._on_intro_finished):
+		BgmManager.GO_player.finished.disconnect(BgmManager._on_intro_finished)
+
 	$Fade_transition.show()
 	$Fade_transition/fade_timer.start()
 	$Fade_transition/Fade_transition/AnimationPlayer.play("Fade_in")

@@ -23,7 +23,8 @@ func _process(delta: float) -> void:
 		global_position.y = clamp(global_position.y, 642, 690)
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("enemy"):
+	if area.is_in_group("enemy") and not area.get_meta("has_hit", false):
+		area.set_meta("has_hit", true)
 		area.queue_free()
-		if mainScene != null:
-			mainScene.is_game_over = true
+		if is_instance_valid(mainScene) and mainScene.has_method("take_car_damage"):
+			mainScene.take_car_damage()

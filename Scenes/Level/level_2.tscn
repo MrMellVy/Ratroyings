@@ -3,26 +3,26 @@
 [ext_resource type="Script" uid="uid://gno1ypmich71" path="res://Scripts/levels/level_2.gd" id="1_8b42i"]
 [ext_resource type="PackedScene" uid="uid://b8w4kw2ipi6o8" path="res://Scenes/character/enemy.tscn" id="2_d8j35"]
 [ext_resource type="PackedScene" uid="uid://b7w5ldp1n0qke" path="res://Scenes/character/air_enemy.tscn" id="3_d52fh"]
-[ext_resource type="Texture2D" uid="uid://cf8lxwsdblm8" path="res://Assets/Background/Day/Background.png" id="4_1kfys"]
-[ext_resource type="Texture2D" uid="uid://ch50ooqblafik" path="res://Assets/Background/Day/Cloud1.png" id="5_t8rx8"]
-[ext_resource type="Texture2D" uid="uid://ck8ryb16wtmbn" path="res://Assets/Tilesets/City/Buildings.png" id="6_rc20r"]
-[ext_resource type="Texture2D" uid="uid://bt3it2eeh8pcr" path="res://Assets/Tilesets/City/Buildings_2.png" id="7_d8j35"]
-[ext_resource type="Texture2D" uid="uid://dpui6y2i7aj56" path="res://Assets/Tilesets/City/Roads.png" id="7_r1dii"]
-[ext_resource type="Texture2D" uid="uid://dyhirno48mfiq" path="res://Assets/Tilesets/City/Platform-Sheet.png" id="8_hn4hu"]
-[ext_resource type="Texture2D" uid="uid://carjrejog3yx1" path="res://Assets/Tilesets/City/Car.png" id="9_h104p"]
+[ext_resource type="Texture2D" uid="uid://bb00eynrvulr5" path="res://Assets/Background/Day/Background.png" id="4_1kfys"]
+[ext_resource type="Texture2D" uid="uid://b61xsq3nsy3ov" path="res://Assets/Background/Day/Cloud1.png" id="5_t8rx8"]
+[ext_resource type="Texture2D" uid="uid://c1bgiiaybxlgi" path="res://Assets/Tilesets/City/Buildings.png" id="6_rc20r"]
+[ext_resource type="Texture2D" uid="uid://cjd2ge7o522gs" path="res://Assets/Tilesets/City/Buildings_2.png" id="7_d8j35"]
+[ext_resource type="Texture2D" uid="uid://cvf3bgsan8y3p" path="res://Assets/Tilesets/City/Roads.png" id="7_r1dii"]
+[ext_resource type="Texture2D" uid="uid://dx0xc72w8yhk3" path="res://Assets/Tilesets/City/Platform-Sheet.png" id="8_hn4hu"]
+[ext_resource type="Texture2D" uid="uid://de0e54knjityu" path="res://Assets/Tilesets/City/Car.png" id="9_h104p"]
 [ext_resource type="PackedScene" uid="uid://by1622uoguy0" path="res://Scenes/Menu/Transition.tscn" id="10_nq7eo"]
 [ext_resource type="PackedScene" uid="uid://bhoc04ca7xoh5" path="res://Scenes/Other/ScoreWaveLabels.tscn" id="11_g5aqo"]
-[ext_resource type="Texture2D" uid="uid://ceh7ybe25p14a" path="res://Assets/Tilesets/Lab/item_lab.png" id="11_t8rx8"]
+[ext_resource type="Texture2D" uid="uid://defbw4lmykqlj" path="res://Assets/Tilesets/Lab/item_lab.png" id="11_t8rx8"]
 [ext_resource type="PackedScene" uid="uid://w7doc70s2ixt" path="res://Scenes/character/player.tscn" id="12_53c2y"]
 [ext_resource type="PackedScene" uid="uid://bhik0cbrtt1bx" path="res://Scenes/Menu/pause_menu.tscn" id="13_j3u46"]
 [ext_resource type="PackedScene" uid="uid://83r0sj6dfeal" path="res://Scenes/character/boss.tscn" id="15_1kfys"]
 [ext_resource type="PackedScene" uid="uid://ca0uhuktjhjrw" path="res://Scenes/character/Support_CH.tscn" id="15_d52fh"]
-[ext_resource type="FontFile" uid="uid://bgx1d1885ufiu" path="res://Assets/Fonts/Ririgitriz.ttf" id="16_rc20r"]
+[ext_resource type="FontFile" uid="uid://dd2xy2gqkryyj" path="res://Assets/Fonts/Ririgitriz.ttf" id="16_rc20r"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnohd"]
 load_path = "res://.godot/imported/Cloud0.png-f7d3aa7d538e5189608ed4a3e481fd2e.ctex"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c458c"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r1dii"]
 texture = ExtResource("6_rc20r")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -3, 8, -3, 8, 0, -5.5, 0)
@@ -208,7 +208,7 @@ texture = ExtResource("6_rc20r")
 23:7/0 = 0
 24:7/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d52fh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hn4hu"]
 texture = ExtResource("7_d8j35")
 33:8/0 = 0
 34:8/0 = 0
@@ -649,8 +649,8 @@ texture = ExtResource("7_d8j35")
 [sub_resource type="TileSet" id="TileSet_pvlc2"]
 physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 3
-sources/0 = SubResource("TileSetAtlasSource_c458c")
-sources/1 = SubResource("TileSetAtlasSource_d52fh")
+sources/0 = SubResource("TileSetAtlasSource_r1dii")
+sources/1 = SubResource("TileSetAtlasSource_hn4hu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d68a7"]
 texture = ExtResource("7_r1dii")
@@ -1181,7 +1181,7 @@ position = Vector2(447, -6)
 position = Vector2(676, -6)
 
 [node name="AirEnemySpawnPoint5" type="Marker2D" parent="." unique_id=723228662]
-position = Vector2(1139, -4)
+position = Vector2(243, -6)
 
 [node name="AirEnemySpawnPoint6" type="Marker2D" parent="." unique_id=337011565]
 position = Vector2(1552, 4)
@@ -1227,7 +1227,7 @@ position = Vector2(737, 36)
 shape = SubResource("RectangleShape2D_akeww")
 
 [node name="Player" parent="." unique_id=1296403870 instance=ExtResource("12_53c2y")]
-position = Vector2(-371, 159)
+position = Vector2(-157, -283)
 collision_mask = 78
 jumps = 2
 

@@ -144,8 +144,10 @@ func handle_defeat_sequence():
 	is_roaming = false
 	play_enemy_animation("defeat")
 	velocity.x = 0
-	await get_tree().create_timer(1.0).timeout
-	handle_defeat()
+	if is_inside_tree():
+		await get_tree().create_timer(1.0).timeout
+	if is_instance_valid(self):
+		handle_defeat()
 
 func handle_defeat():
 	Global.current_score += points_for_kill
@@ -170,7 +172,10 @@ func _on_enemy_hitbox_area_entered(area: Area2D) -> void:
 		var damage = Global.playerDamageAmount
 		take_damage(damage)
 		
+
 func take_damage(damage):
+	if not is_inside_tree() or defeat:
+			return
 	interrupt_attack()
 	
 	health -= damage
@@ -181,8 +186,10 @@ func take_damage(damage):
 		defeat = true
 		handle_defeat_sequence()
 	else:
-		await get_tree().create_timer(0.8).timeout
-		taking_damage = false
+		if is_inside_tree():
+			await get_tree().create_timer(0.8).timeout
+		if is_instance_valid(self):
+			taking_damage = false
 	print(str(self), "current health is ", health)
 
 func attack_sequence():
@@ -216,7 +223,7 @@ func stop_damage() -> void:
 func end_attack() -> void:
 	is_attacking = false
 	is_dealing_damage = false
-	if defeat:
+	if defeat or not is_inside_tree():
 		return
 	get_tree().create_timer(3.0).timeout.connect(_attack_cooldown_finished)
 

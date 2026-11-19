@@ -4,7 +4,7 @@
         {"name": "You", "text": "How can we reach that creature!?", "face": "SpriteFace_What"},
         {"name": "Nashear", "text": "I have a car.", "face": "CHSpriteFace_Haha_2", "event": "showcar"},
         {"name": "You", "text": "Oh, alright. let's go.", "face": "SpriteFace_Haha_2"},
-        {"name": "Nashear", "text": "...", "face": "CHSpriteFace_Silence_1", "auto": 3.0,  "event": "boss_chase"},
+        {"name": "Nashear", "text": "...", "face": "CHSpriteFace_Silence_1", "auto": 3.0,  "event": "boss_chase"}
 
 ]
 

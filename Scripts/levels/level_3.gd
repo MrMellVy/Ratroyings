@@ -13,6 +13,7 @@ var minion_spawner_timer: Timer
 
 func _ready() -> void:
 	Global.enemies_passive = false
+	Global.current_wave = 6 # Set your wave number for Level 3 so WaveAnim displays it
 
 	$Fade_transition.show()
 	$Fade_transition.layer = 2
@@ -24,13 +25,17 @@ func _ready() -> void:
 	$player.movementInputMonitoring = Vector2(true, true)
 	$player/PlayerHealthbar.visible = true
 	
+	# Always restore full health at the start of Level 3, while keeping damage_bonus
+	var max_hp: int = $player.health_max if "health_max" in $player else 100
+	$player.health = max_hp
+	Global.saved_player_health = max_hp
+
 	if Global.is_continuing:
-		$player.health = Global.saved_player_health
 		$player.damage_bonus = Global.saved_player_damage_bonus
 		Global.is_continuing = false
 	else:
-		$player.health = $player.health_max if "health_max" in $player else 100 
 		$player.damage_bonus = 0
+
 	if has_node("BorderCollision1"):
 		$BorderCollision1/CollisionShape2D.set_deferred("disabled", false)
 	if has_node("BorderCollision2"):
@@ -39,8 +44,35 @@ func _ready() -> void:
 	boss_rat_1.show()
 	boss_rat_1.get_node("UI").show()
 	boss_rat_1.process_mode = Node.PROCESS_MODE_INHERIT
+
+	play_level_intro_ui()
 	start_boss_enemy_spawner()
 	autosave_checkpoint()
+
+func play_level_intro_ui() -> void:
+	if not has_node("scoreLabels"):
+		return
+
+	$scoreLabels.visible = true
+	$scoreLabels.layer = 3
+
+	if has_node("scoreLabels/MiddlecurrentwaveLabel"):
+		$scoreLabels/MiddlecurrentwaveLabel.visible = true
+
+	$scoreLabels/ScoreAnim.play("ScoreUp")
+	$scoreLabels/WaveAnim.play("WaveUp")
+	$scoreLabels/MiddleWaveAnim.play("LeftStart")
+
+	await $scoreLabels/ScoreAnim.animation_finished
+	await $scoreLabels/WaveAnim.animation_finished
+	await $scoreLabels/MiddleWaveAnim.animation_finished
+
+	await get_tree().create_timer(1.5).timeout
+
+	if is_inside_tree():
+		$scoreLabels/ScoreAnim.play("ScoreDown")
+		$scoreLabels/WaveAnim.play("WaveDown")
+		$scoreLabels/MiddleWaveAnim.play("RightExit")
 
 func start_boss_enemy_spawner() -> void:
 	if minion_spawner_timer == null:
