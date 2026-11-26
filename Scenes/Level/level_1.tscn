@@ -501,6 +501,62 @@ theme_override_fonts/font = ExtResource("12_fvaf1")
 theme_override_font_sizes/font_size = 15
 text = "KEY_GO"
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=999900001]
+
+[node name="Tip1" type="Label" parent="Player/CanvasLayer" unique_id=999900002]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 600.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("12_fvaf1")
+theme_override_font_sizes/font_size = 24
+text = "KEY_G1"
+
+[node name="Tip2" type="Label" parent="Player/CanvasLayer" unique_id=999900003]
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 600.0
+offset_bottom = 120.0
+theme_override_fonts/font = ExtResource("12_fvaf1")
+theme_override_font_sizes/font_size = 24
+text = "KEY_G2"
+
+[node name="Tip3" type="Label" parent="Player/CanvasLayer" unique_id=999900004]
+offset_left = 40.0
+offset_top = 120.0
+offset_right = 600.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("12_fvaf1")
+theme_override_font_sizes/font_size = 24
+text = "KEY_G3"
+
+[node name="Tip4" type="Label" parent="Player/CanvasLayer" unique_id=999900005]
+offset_left = 40.0
+offset_top = 160.0
+offset_right = 600.0
+offset_bottom = 200.0
+theme_override_fonts/font = ExtResource("12_fvaf1")
+theme_override_font_sizes/font_size = 24
+text = "KEY_G4"
+
+[node name="Tip5" type="Label" parent="Player/CanvasLayer" unique_id=999900006]
+offset_left = 40.0
+offset_top = 200.0
+offset_right = 600.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("12_fvaf1")
+theme_override_font_sizes/font_size = 24
+text = "KEY_G5"
+
+[node name="Tip6" type="Label" parent="Player/CanvasLayer" unique_id=999900007]
+offset_left = 40.0
+offset_top = 240.0
+offset_right = 600.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("12_fvaf1")
+theme_override_font_sizes/font_size = 24
+text = "KEY_G6"
+
 [node name="scoreLabels" parent="." unique_id=969138735 instance=ExtResource("10_q2tg5")]
 
 [node name="WorldCamera" type="Camera2D" parent="." unique_id=1481191766]

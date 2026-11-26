@@ -174,7 +174,7 @@ func _on_fade_timer_timeout() -> void:
 			100,
 			0
 		)
-		get_tree().change_scene_to_file("res://Scenes/Other/Keyboardshortcut.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Cutscene/cutscene_1.tscn")
 	elif button_type == "continue":
 		Global.gameStarted = true
 		
@@ -194,7 +194,7 @@ func _on_fade_timer_timeout() -> void:
 		Global.saved_wave = 4
 		Global.saved_player_health = 150
 		Global.saved_player_damage_bonus = 20
-		get_tree().change_scene_to_file("res://Scenes/Other/Keyboardshortcut.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Cutscene/cutscene_1.tscn")
 	elif fade_startup == true:
 		$Fade_transition.hide()
 		
