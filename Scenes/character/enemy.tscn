@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://fghrthui1xwf" path="res://Assets/Sprites/Enemy/Original/tikusidle.png" id="4_0830c"]
 [ext_resource type="Texture2D" uid="uid://defhi4ix8ng6q" path="res://Assets/Sprites/Enemy/Original/tikus jalan.png" id="6_auwsv"]
 [ext_resource type="PackedScene" uid="uid://iht8j2jxjtk0" path="res://Scenes/Other/damage_label_indicator.tscn" id="8_7odo0"]
-[ext_resource type="AudioStream" uid="uid://dhsqwrflspdsm" path="res://Assets/Audio/SFX/Hitsound.ogg" id="8_skj07"]
+[ext_resource type="AudioStream" uid="uid://dhsqwrflspdsm" path="res://Assets/Audio/SFX/Hitsound.wav" id="8_skj07"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hghv2"]
 radius = 8.062258
