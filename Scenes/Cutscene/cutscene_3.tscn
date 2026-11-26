@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://w7doc70s2ixt" path="res://Scenes/character/player.tscn" id="8_1bp6q"]
 [ext_resource type="PackedScene" uid="uid://bhik0cbrtt1bx" path="res://Scenes/Menu/pause_menu.tscn" id="9_55l2s"]
 [ext_resource type="PackedScene" uid="uid://ca0uhuktjhjrw" path="res://Scenes/character/Support_CH.tscn" id="11_tt1ut"]
-[ext_resource type="AudioStream" uid="uid://c6o5s6rr6s47w" path="res://Assets/Audio/SFX/WooshBoss.wav" id="12_c25yr"]
+[ext_resource type="AudioStream" uid="uid://c6o5s6rr6s47w" path="res://Assets/Audio/SFX/WooshBoss.ogg" id="12_c25yr"]
 [ext_resource type="Texture2D" uid="uid://ds3bfmiexbhlr" path="res://Assets/Sprites/Boss/1/minibos_idle.png" id="13_4ul3f"]
 [ext_resource type="Texture2D" uid="uid://huhlnyv7f6fj" path="res://Assets/Sprites/Boss/1/minibos_skill.png" id="14_ry550"]
 [ext_resource type="Texture2D" uid="uid://mx3f8ff8oodu" path="res://Assets/Tilesets/City/Roads_crack.png" id="15_hc4xf"]

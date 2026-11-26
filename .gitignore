@@ -16,7 +16,6 @@ data_*/
 mono_crash.*.json
 *.import
 *.tmp
-export_presets.cfg
 Build/PestBuster.exe
 Assets/Sprites/Spritesquare/spritesquare1.gdshader.uid
 Assets/Sprites/Spritesquare/spritesquare1.gdshader
@@ -30,3 +29,7 @@ Ratroyings_x86_32.exe
 Ratroyings_x86_32.console.exe
 Ratroying_LINUX.x86_64
 Ratroying_LINUX.sh
+Build/
+*.pck
+*.zip
+*.tar.gz

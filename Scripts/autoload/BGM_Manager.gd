@@ -41,7 +41,7 @@ func set_pause_state(paused: bool) -> void:
 func play_defeated():
 	stop()
 	dummy_player.stop()
-	GO_player.stream = load("res://Assets/Audio/SFX/Gameovertheme.wav")
+	GO_player.stream = load("res://Assets/Audio/SFX/Gameovertheme.ogg")
 	GO_player.volume_db = 0.0
 	GO_player.play()
 	
