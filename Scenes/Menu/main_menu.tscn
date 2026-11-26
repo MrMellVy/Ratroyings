@@ -857,6 +857,12 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wyh8j"]
 
+[sub_resource type="Gradient" id="Gradient_gcenh"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.34117648)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tvy6i"]
+gradient = SubResource("Gradient_gcenh")
+
 [sub_resource type="Animation" id="Animation_wyh8j"]
 resource_name = "ButtonPressed"
 length = 0.5166999999999999
@@ -1240,17 +1246,19 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 
-[node name="DarkOverlay" type="ColorRect" parent="." unique_id=723621456]
+[node name="DarkOverlay" type="TextureRect" parent="." unique_id=394506163]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
+offset_left = 1280.0
 offset_top = -1.0
-offset_right = 1277.0
+offset_right = 719.89905
+offset_bottom = 559.21094
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.36078432)
+rotation = 1.5707964
+texture = SubResource("GradientTexture1D_tvy6i")
 
 [node name="DarkOverlay2" type="ColorRect" parent="." unique_id=67919247]
 layout_mode = 1
@@ -1260,6 +1268,19 @@ anchor_bottom = 1.0
 offset_left = -1287.0
 offset_top = -1.0
 offset_right = -1284.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="DarkOverlay3" type="ColorRect" parent="." unique_id=1861739630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1275.0
+offset_top = -9.0
+offset_right = 1278.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.627451)
@@ -1359,10 +1380,10 @@ texture = ExtResource("24_kqfms")
 
 [node name="Options" parent="." unique_id=315415237 instance=ExtResource("19_0jto8")]
 layout_mode = 1
-offset_left = 1280.0
-offset_top = 1.0
-offset_right = 1280.0
-offset_bottom = 1.0
+offset_left = 1281.0
+offset_top = -5.0
+offset_right = 1281.0
+offset_bottom = -5.0
 
 [node name="AnimationBStart" type="AnimationPlayer" parent="." unique_id=518537144]
 root_node = NodePath("../MainButtons/Button_Manager/Exit")

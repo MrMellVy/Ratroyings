@@ -123,6 +123,8 @@ func find_target_enemy() -> void:
 	target_enemy = null
 	var closet_distance: float = detection_range
 	
+	var cam: Camera2D = player.world_camera if player != null else null
+	
 	for node: Node in get_tree().get_nodes_in_group("enemies"):
 		if not is_instance_valid(node):
 			continue
@@ -135,6 +137,15 @@ func find_target_enemy() -> void:
 		
 		if "defeat" in node and node.defeat:
 			continue
+		
+		# Skip air enemies (EnemyAir class) as they move slowly and cause erratic behavior
+		if node is EnemyAir:
+			continue
+		
+		if cam != null:
+			var ex: float = node.global_position.x
+			if ex < cam.limit_left or ex > cam.limit_right:
+				continue
 		
 		var enemy_node: CharacterBody2D = node
 		var distance_to_enemy: float = global_position.distance_to(enemy_node.global_position)
